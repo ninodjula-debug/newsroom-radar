@@ -201,7 +201,7 @@ let lastDataStamp="";
 async function refreshNews(){
  try{
   // Load committed data directly, independent of Pages deployment delays.
-  const liveUrl="https://raw.githubusercontent.com/ninodjula-debug/newsroom-radar/main/news.json?t="+Date.now();
+  const liveUrl="https://raw.githubusercontent.com/ninodjula-debug/newsroom-radar/radar-data/news.json?t="+Date.now();
   let response,source="GitHub (izravno)";
   try{
    response=await fetch(liveUrl,{cache:"no-store"});
