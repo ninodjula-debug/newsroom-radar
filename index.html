@@ -40,7 +40,7 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<h2>Novo od posljednjeg pregleda</h2><p class="note">Novi članci od prethodnog otvaranja na ovom uređaju. Oznaka se sprema samo u ovom pregledniku.</p><div id="new-since"></div><h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
+<h2>Sutra na dnevnom redu</h2><p class="note">Početni urednički kalendar iz službenih najava. Ručno provjereno 14. listopada 2026.; još se ne osvježava automatski.</p><div id="agenda"></div><h2>Novo od posljednjeg pregleda</h2><p class="note">Novi članci od prethodnog otvaranja na ovom uređaju. Oznaka se sprema samo u ovom pregledniku.</p><div id="new-since"></div><h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
 </main>
 <script>
 let articles=[];
@@ -138,10 +138,31 @@ function renderNew(items){
  for(const a of fresh.slice(0,30)){const card=makeCard(a);if(card)root.append(card)}
  if(fresh.length>30){const p=document.createElement("p");p.className="note";p.textContent="Prikazano prvih 30 novih članaka.";root.append(p)}
 }
+const agendaSeed=[
+ {date:"2026-10-15",time:"11:00",title:"24. sjednica Odbora za pomorstvo, promet i infrastrukturu",source:"Hrvatski sabor",place:"Dvorana Katarine Zrinski",url:"https://www.sabor.hr/hr/sve-najave/mjesec/202610"},
+ {date:"2026-10-15",time:"11:00",title:"Okrugli stol Odbora za poljoprivredu",source:"Hrvatski sabor",place:"Dvorana Ivana Mažuranića / YouTube",url:"https://www.sabor.hr/hr/sve-najave/mjesec/202610"},
+ {date:"2026-10-15",time:"10:00",title:"Okrugli stol Kluba zastupnika SDP-a",source:"Hrvatski sabor",place:"Dvorana Stjepana Radića / YouTube",url:"https://www.sabor.hr/hr/sve-najave/mjesec/202610"},
+ {date:"2026-10-15",time:null,title:"Sastanak Europskog vijeća (15.–16. listopada): gospodarstvo, energija, Ukrajina i migracije",source:"Europsko vijeće",place:"Bruxelles",url:"https://www.consilium.europa.eu/en/meetings/european-council/2026/10/15/"},
+ {date:"2026-10-15",time:null,title:"Premijer Plenković u Bruxellesu (14.–16. listopada)",source:"Vlada RH",place:"Bruxelles",url:"https://vlada.gov.hr/najave/"}
+];
+function renderAgenda(){
+ const root=document.getElementById("agenda");root.replaceChildren();
+ const tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);
+ const day=tomorrow.getFullYear()+"-"+String(tomorrow.getMonth()+1).padStart(2,"0")+"-"+String(tomorrow.getDate()).padStart(2,"0");
+ const rows=agendaSeed.filter(x=>x.date===day).sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
+ if(!rows.length){const p=document.createElement("p");p.className="note";p.textContent="Za sutrašnji datum ("+day+") još nema provjerenih najava u ovom početnom kalendaru. Ne prikazujemo zastarjele događaje.";root.append(p);return}
+ for(const a of rows){
+  const card=document.createElement("article");card.className="card";
+  const title=document.createElement("a");title.textContent=(a.time?a.time+" · ":"Vrijeme nije potvrđeno · ")+a.title;title.href=a.url;title.target="_blank";title.rel="noopener noreferrer";
+  const meta=document.createElement("div");meta.className="meta";meta.textContent=a.source+" · "+a.place+" · "+a.date+" · službena najava";
+  card.append(title,meta);root.append(card);
+ }
+}
 function render(){
  const term=document.getElementById("search").value.toLocaleLowerCase("hr");
  const selected=articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term));
  document.getElementById("status").textContent="Prikazano "+selected.length+" od "+articles.length+" vijesti";
+ renderAgenda();
  renderNew(selected);
  renderPriorities(selected);
  renderClusters(selected);
