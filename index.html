@@ -225,6 +225,69 @@ document.querySelectorAll("button[data-filter]").forEach(btn=>{
  });
 });
 document.getElementById("search").addEventListener("input",render);
+
+// Browser-side RSS fallback. Cross-origin restrictions are expected and reported honestly.
+const browserFeeds=[
+ ["HRT","https://www.hrt.hr/rss/vijesti","Hrvatska"],
+ ["N1 Hrvatska","https://n1info.hr/feed/","Hrvatska"],
+ ["Index","https://www.index.hr/rss","Hrvatska"],
+ ["Telegram","https://www.telegram.hr/feed/","Hrvatska"],
+ ["Tportal","https://www.tportal.hr/rss","Hrvatska"],
+ ["Poslovni dnevnik","https://www.poslovni.hr/feed","Hrvatska"],
+ ["Večernji list","https://www.vecernji.hr/feeds/latest","Hrvatska"],
+ ["BBC World","https://feeds.bbci.co.uk/news/world/rss.xml","Svijet"],
+ ["BBC Europe","https://feeds.bbci.co.uk/news/world/europe/rss.xml","Svijet"],
+ ["The Guardian","https://www.theguardian.com/world/rss","Svijet"],
+ ["The Guardian Europe","https://www.theguardian.com/world/europe-news/rss","Svijet"],
+ ["Al Jazeera","https://www.aljazeera.com/xml/rss/all.xml","Svijet"],
+ ["DW","https://rss.dw.com/rdf/rss-en-all","Svijet"],
+ ["France 24","https://www.france24.com/en/rss","Svijet"],
+ ["Euronews","https://www.euronews.com/rss","Svijet"],
+ ["Politico Europe","https://www.politico.eu/feed/","Svijet"],
+ ["CNBC World","https://www.cnbc.com/id/100727362/device/rss/rss.html","Svijet"],
+ ["TechCrunch","https://techcrunch.com/feed/","Svijet"],
+ ["Ars Technica","https://feeds.arstechnica.com/arstechnica/index","Svijet"],
+ ["The Verge","https://www.theverge.com/rss/index.xml","Svijet"],
+ ["European Commission","https://ec.europa.eu/commission/presscorner/api/rss?language=en","Svijet"],
+ ["ECB","https://www.ecb.europa.eu/rss/press.html","Svijet"]
+];
+let browserFeedBusy=false;
+async function browserRefresh(){
+ if(browserFeedBusy)return;
+ browserFeedBusy=true;
+ const status=document.getElementById("browser-rss-status");
+ const button=document.getElementById("browser-rss-button");
+ button.disabled=true;status.textContent="Provjeravam RSS izvore izravno u pregledniku…";
+ const results=await Promise.all(browserFeeds.map(async ([source,url,category])=>{
+  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),6500);
+  try{
+   const response=await fetch(url,{cache:"no-store",signal:controller.signal});
+   if(!response.ok)throw Error("HTTP "+response.status);
+   const xml=new DOMParser().parseFromString(await response.text(),"application/xml");
+   if(xml.querySelector("parsererror"))throw Error("Neispravan RSS");
+   const nodes=[...xml.querySelectorAll("item, entry")].slice(0,25);
+   if(!nodes.length)throw Error("Nema stavki");
+   const items=nodes.map(node=>{
+    const get=(name)=>node.getElementsByTagName(name)[0]?.textContent?.trim()||"";
+    const atomLink=[...node.getElementsByTagName("link")].find(el=>el.getAttribute("href")&&(!el.getAttribute("rel")||el.getAttribute("rel")==="alternate"));
+    const url=atomLink?.getAttribute("href")||get("link");
+    const raw=get("pubDate")||get("published")||get("updated")||get("date");
+    const dt=Date.parse(raw);
+    return {title:get("title"),url,source,category,published:raw,published_iso:Number.isFinite(dt)?new Date(dt).toISOString():null};
+   }).filter(a=>a.title&&/^https?:\/\//.test(a.url));
+   return {source,items};
+  }catch(e){return {source,items:[]}}
+  finally{clearTimeout(timeout)}
+ }));
+ const successful=results.filter(r=>r.items.length);
+ const additions=new Map(articles.map(a=>[a.url,a]));
+ for(const r of successful)for(const a of r.items)additions.set(a.url,a);
+ const count=additions.size-articles.length;
+ if(successful.length){articles=newestFirst([...additions.values()]);render()}
+ status.textContent="Izravni RSS: "+successful.length+"/"+browserFeeds.length+" izvora dostupno pregledniku · "+Math.max(0,count)+" novih poveznica · provjera "+new Date().toLocaleTimeString("hr-HR",{hour:"2-digit",minute:"2-digit"})+". Nedostupni izvori ovise o GitHubovu prikupljanju.";
+ button.disabled=false;browserFeedBusy=false;
+}
+
 let lastDataStamp="";
 async function refreshNews(){
  try{
@@ -276,9 +339,16 @@ async function refreshCalendar(){
   document.getElementById("calendar-status").textContent="Automatski kalendar još nije dostupan. Prikazujemo početne ručno provjerene najave.";
  }
 }
-refreshNews();refreshCalendar();
+const rssControls=document.createElement("div");
+rssControls.style.cssText="display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:12px 0";
+const rssButton=document.createElement("button");rssButton.id="browser-rss-button";rssButton.type="button";rssButton.textContent="Provjeri RSS uživo";rssButton.addEventListener("click",browserRefresh);
+const rssStatus=document.createElement("span");rssStatus.id="browser-rss-status";rssStatus.className="note";rssStatus.textContent="Provjera RSS izvora izravno iz preglednika, gdje to izvori dopuštaju.";
+rssControls.append(rssButton,rssStatus);
+document.getElementById("freshness").insertAdjacentElement("afterend",rssControls);
+refreshNews();refreshCalendar();browserRefresh();
 setInterval(refreshNews,5*60*1000);
 setInterval(refreshCalendar,5*60*1000);
+setInterval(browserRefresh,5*60*1000);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden){refreshNews();refreshCalendar()}});
 </script>
 </body>
