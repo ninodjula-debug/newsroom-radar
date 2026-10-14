@@ -1,0 +1,18 @@
+{
+  "updated": "2026-10-14T14:06:26.673978+00:00",
+  "timezone": "Europe/Zagreb",
+  "events": [],
+  "checks": [
+    {
+      "source": "Hrvatski sabor",
+      "ok": true,
+      "events": 0
+    },
+    {
+      "source": "Vijeće EU",
+      "ok": false,
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "note": "Only confirmed dates from official pages; missing time is not inferred."
+}
