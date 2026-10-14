@@ -44,6 +44,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp news.json /tmp/radar-news.json
           cp calendar.json /tmp/radar-calendar.json
+          git reset --hard HEAD
           for attempt in 1 2 3 4 5; do
             git fetch origin radar-data
             git checkout -B radar-data origin/radar-data
