@@ -52,7 +52,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #93
 </header>
 <nav class="nav-shell" aria-label="Izbornik rubrika"><div class="section-nav"><a href="#agenda-section">Kalendar</a><a href="#new-section">Novo</a><a href="#priorities-section">Urednički pregled</a><a href="#clusters-section">Više izvora</a><a href="#news-section">Sve vijesti</a></div></nav>
 <main>
-<p id="status">Učitavam vijesti...</p>
+<p id="status" aria-live="polite">Učitavam vijesti...</p><p id="freshness" class="note" aria-live="polite"></p>
 <div class="controls">
 <button class="active" data-filter="Sve">Sve vijesti</button>
 <button data-filter="Hrvatska">Hrvatska</button>
@@ -197,17 +197,35 @@ document.querySelectorAll("button[data-filter]").forEach(btn=>{
  });
 });
 document.getElementById("search").addEventListener("input",render);
-fetch("./news.json?t="+Date.now())
- .then(r=>{if(!r.ok)throw Error("Nema podataka");return r.json()})
- .then(data=>{
-  articles=Array.isArray(data.articles)?data.articles:[];
-  render();
-  try{localStorage.setItem(seenKey,JSON.stringify({urls:articles.map(a=>a.url).filter(Boolean),savedAt:new Date().toISOString()}))}catch(e){}
- })
- .catch(()=>{
-  document.getElementById("status").textContent=
-   "Vijesti se nisu uspjele učitati. Pokušaj osvježiti stranicu.";
- });
+let lastDataStamp="";
+async function refreshNews(){
+ try{
+  const response=await fetch("./news.json?t="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw Error("Nema podataka");
+  const data=await response.json();
+  const stamp=data.updated||"";
+  const when=stamp?new Date(stamp):null;
+  const valid=when&&!Number.isNaN(when.getTime());
+  const label=valid?when.toLocaleString("hr-HR",{dateStyle:"short",timeStyle:"short"}):"nepoznato";
+  const age=valid?(Date.now()-when.getTime())/60000:null;
+  const freshness=document.getElementById("freshness");
+  freshness.textContent="Podaci prikupljeni: "+label+(age!==null&&age>40?" · UPOZORENJE: podaci su stariji od 40 minuta. Automatsko prikupljanje možda ne radi.":"")+" · Stranica provjerava novosti svakih 5 minuta.";
+  if(stamp!==lastDataStamp){
+   articles=Array.isArray(data.articles)?data.articles:[];
+   lastDataStamp=stamp;
+   render();
+   if(!previousSeen||!Array.isArray(previousSeen.urls)){
+    try{localStorage.setItem(seenKey,JSON.stringify({urls:articles.map(a=>a.url).filter(Boolean),savedAt:new Date().toISOString()}))}catch(e){}
+   }
+  }
+ }catch(e){
+  document.getElementById("freshness").textContent="Provjera novih podataka nije uspjela. Pokušaj ponovno kasnije.";
+  if(!articles.length)document.getElementById("status").textContent="Vijesti se nisu uspjele učitati.";
+ }
+}
+refreshNews();
+setInterval(refreshNews,5*60*1000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)refreshNews()});
 </script>
 </body>
 </html>
