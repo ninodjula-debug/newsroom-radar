@@ -164,12 +164,26 @@ const agendaSeed=[
  {date:"2026-10-15",time:null,title:"Sastanak Europskog vijeća (15.–16. listopada): gospodarstvo, energija, Ukrajina i migracije",source:"Europsko vijeće",place:"Bruxelles",url:"https://www.consilium.europa.eu/en/meetings/european-council/2026/10/15/"},
  {date:"2026-10-15",time:null,title:"Premijer Plenković u Bruxellesu (14.–16. listopada)",source:"Vlada RH",place:"Bruxelles",url:"https://vlada.gov.hr/najave/"}
 ];
+const calendarSources=[
+ ["Hrvatski sabor","https://www.sabor.hr/hr/sve-najave/mjesec/202610","Hrvatska"],
+ ["Vlada RH","https://vlada.gov.hr/najave/","Hrvatska"],
+ ["Europsko vijeće","https://www.consilium.europa.eu/en/meetings/","Svijet"],
+ ["EU događaji","https://european-union.europa.eu/news-and-events/events_en","Svijet"],
+ ["Europska komisija","https://commission.europa.eu/about/organisation/college-commissioners/calendar-items-president-and-commissioners_en","Svijet"]
+];
+function renderCalendarSources(root){
+ const details=document.createElement("details");details.style.marginTop="12px";
+ const summary=document.createElement("summary");summary.textContent="Službeni kalendari za dodatnu uredničku provjeru";details.append(summary);
+ const ul=document.createElement("ul");
+ for(const [name,url,area] of calendarSources){const li=document.createElement("li"),a=document.createElement("a");a.textContent=name+" · "+area;a.href=url;a.target="_blank";a.rel="noopener noreferrer";li.append(a);ul.append(li)}
+ details.append(ul);root.append(details);
+}
 function renderAgenda(){
  const root=document.getElementById("agenda");root.replaceChildren();
  const tomorrow=new Date();tomorrow.setDate(tomorrow.getDate()+1);
  const day=tomorrow.getFullYear()+"-"+String(tomorrow.getMonth()+1).padStart(2,"0")+"-"+String(tomorrow.getDate()).padStart(2,"0");
  const rows=agendaSeed.filter(x=>x.date===day).sort((a,b)=>(a.time||"99:99").localeCompare(b.time||"99:99"));
- if(!rows.length){const p=document.createElement("p");p.className="note";p.textContent="Za sutrašnji datum ("+day+") još nema provjerenih najava u ovom početnom kalendaru. Ne prikazujemo zastarjele događaje.";root.append(p);return}
+ if(!rows.length){const p=document.createElement("p");p.className="note";p.textContent="Za sutrašnji datum ("+day+") još nema provjerenih najava u ovom početnom kalendaru. Ne prikazujemo zastarjele događaje.";root.append(p);renderCalendarSources(root);return}
  for(const a of rows){
   const card=document.createElement("article");card.className="card";
   const title=document.createElement("a");title.textContent=(a.time?a.time+" · ":"Vrijeme nije potvrđeno · ")+a.title;title.href=a.url;title.target="_blank";title.rel="noopener noreferrer";
