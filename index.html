@@ -40,11 +40,14 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
+<h2>Novo od posljednjeg pregleda</h2><p class="note">Novi članci od prethodnog otvaranja na ovom uređaju. Oznaka se sprema samo u ovom pregledniku.</p><div id="new-since"></div><h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
 </main>
 <script>
 let articles=[];
 let filter="Sve";
+let previousSeen=null;
+const seenKey="newsroom-radar-last-seen-v1";
+try{previousSeen=JSON.parse(localStorage.getItem(seenKey)||"null")}catch(e){previousSeen=null}
 
 function makeCard(a){
  let url;
@@ -123,10 +126,23 @@ function renderPriorities(items){
   root.append(card);
  }
 }
+function renderNew(items){
+ const root=document.getElementById("new-since");root.replaceChildren();
+ const info=document.createElement("p");info.className="note";
+ if(!previousSeen||!Array.isArray(previousSeen.urls)){
+  info.textContent="Prvi pregled na ovom uređaju. Od sljedećeg otvaranja označavat ćemo nove članke.";root.append(info);return;
+ }
+ const old=new Set(previousSeen.urls);
+ const fresh=items.filter(a=>a.url&&!old.has(a.url));
+ info.textContent=fresh.length+" novih članaka u trenutačnom filtru od prethodnog otvaranja na ovom uređaju.";root.append(info);
+ for(const a of fresh.slice(0,30)){const card=makeCard(a);if(card)root.append(card)}
+ if(fresh.length>30){const p=document.createElement("p");p.className="note";p.textContent="Prikazano prvih 30 novih članaka.";root.append(p)}
+}
 function render(){
  const term=document.getElementById("search").value.toLocaleLowerCase("hr");
  const selected=articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term));
  document.getElementById("status").textContent="Prikazano "+selected.length+" od "+articles.length+" vijesti";
+ renderNew(selected);
  renderPriorities(selected);
  renderClusters(selected);
  const container=document.getElementById("news");container.replaceChildren();
@@ -146,6 +162,7 @@ fetch("./news.json?t="+Date.now())
  .then(data=>{
   articles=Array.isArray(data.articles)?data.articles:[];
   render();
+  try{localStorage.setItem(seenKey,JSON.stringify({urls:articles.map(a=>a.url).filter(Boolean),savedAt:new Date().toISOString()}))}catch(e){}
  })
  .catch(()=>{
   document.getElementById("status").textContent=
