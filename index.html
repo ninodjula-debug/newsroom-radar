@@ -1,26 +1,95 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Newsroom Radar</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #101827; color: white; margin: 0; padding: 40px 20px; }
-    main { max-width: 900px; margin: auto; }
-    h1 { font-size: 38px; }
-    .card { background: #1e293b; padding: 24px; border-radius: 12px; margin-top: 24px; }
-    .status { color: #86efac; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newsroom Radar</title>
+<style>
+body{font-family:Arial,sans-serif;background:#101827;color:#f8fafc;margin:0}
+header{background:#182338;padding:24px 5%;border-bottom:1px solid #334155}
+h1{margin:0;font-size:30px}
+header p{color:#94a3b8}
+main{max-width:1100px;margin:auto;padding:24px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+button,input{padding:12px;border-radius:8px;border:1px solid #475569;font-size:15px}
+button{background:#334155;color:white;cursor:pointer}
+button.active{background:#2563eb}
+input{background:#1e293b;color:white;flex:1;min-width:180px}
+.card{background:#1e293b;padding:20px;border-radius:12px;margin:12px 0;border:1px solid #334155}
+.card a{color:#f8fafc;text-decoration:none;font-size:19px;font-weight:bold}
+.card a:hover{color:#93c5fd}
+.meta{color:#94a3b8;font-size:13px;margin-top:12px}
+#status{color:#94a3b8;font-size:14px}
+</style>
 </head>
 <body>
-  <main>
-    <h1>NEWSROOM RADAR</h1>
-    <p>Osobni AI urednički asistent</p>
-    <div class="card">
-      <h2>Dobro došao u Newsroom Radar</h2>
-      <p class="status">✓ Početna stranica je spremna</p>
-      <p>Uskoro ovdje stižu hrvatske i svjetske vijesti te prijedlozi novinarskih follow-upova.</p>
-    </div>
-  </main>
+<header>
+<h1>NEWSROOM RADAR</h1>
+<p>Osobni urednički radar | Hrvatska i svijet</p>
+</header>
+<main>
+<p id="status">Učitavam vijesti...</p>
+<div class="controls">
+<button class="active" data-filter="Sve">Sve vijesti</button>
+<button data-filter="Hrvatska">Hrvatska</button>
+<button data-filter="Svijet">Svijet</button>
+<input id="search" placeholder="Pretraži vijesti...">
+</div>
+<div id="news"></div>
+</main>
+<script>
+let articles=[];
+let filter="Sve";
+
+function render(){
+ const term=document.getElementById("search").value.toLocaleLowerCase("hr");
+ const container=document.getElementById("news");
+ container.replaceChildren();
+ const selected=articles.filter(a=>
+  (filter==="Sve"||a.category===filter)&&
+  (a.title+" "+a.source).toLocaleLowerCase("hr").includes(term)
+ );
+ document.getElementById("status").textContent=
+  "Prikazano "+selected.length+" od "+articles.length+" vijesti";
+ for(const a of selected){
+  const card=document.createElement("article");
+  card.className="card";
+  const link=document.createElement("a");
+  link.textContent=a.title;
+  try {
+   const url=new URL(a.url);
+   if(!["https:","http:"].includes(url.protocol))continue;
+   link.href=url.href;
+  }catch(e){continue}
+  link.target="_blank";
+  link.rel="noopener noreferrer";
+  const meta=document.createElement("div");
+  meta.className="meta";
+  meta.textContent=a.source+" | "+a.category+
+   (a.published?" | "+a.published:"");
+  card.append(link,meta);
+  container.append(card);
+ }
+}
+document.querySelectorAll("button[data-filter]").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+  filter=btn.dataset.filter;
+  document.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  render();
+ });
+});
+document.getElementById("search").addEventListener("input",render);
+fetch("./news.json?t="+Date.now())
+ .then(r=>{if(!r.ok)throw Error("Nema podataka");return r.json()})
+ .then(data=>{
+  articles=Array.isArray(data.articles)?data.articles:[];
+  render();
+ })
+ .catch(()=>{
+  document.getElementById("status").textContent=
+   "Vijesti se nisu uspjele učitati. Pokušaj osvježiti stranicu.";
+ });
+</script>
 </body>
 </html>
