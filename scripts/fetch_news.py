@@ -81,8 +81,8 @@ def parse_feed(content, source, category):
             publisher = text(item, "source")
             if publisher and "jutarnji" not in publisher.lower():
                 continue
-            if not publisher and "jutarnji" not in title.lower():
-                continue
+            # Google News search is already restricted to site:jutarnji.hr.
+            # Missing publisher metadata must not exclude valid headlines.
             if title.lower().endswith(" - jutarnji list"):
                 title = title[:-len(" - Jutarnji list")]
         if title and link.startswith(("https://", "http://")):
