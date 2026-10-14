@@ -5,26 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Newsroom Radar</title>
 <style>
-body{font-family:Arial,sans-serif;background:#101827;color:#f8fafc;margin:0}
-header{background:#182338;padding:24px 5%;border-bottom:1px solid #334155}
-h1{margin:0;font-size:30px}
-header p{color:#94a3b8}
-main{max-width:1100px;margin:auto;padding:24px}
-.controls{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
-button,input{padding:12px;border-radius:8px;border:1px solid #475569;font-size:15px}
-button{background:#334155;color:white;cursor:pointer}
-button.active{background:#2563eb}
-input{background:#1e293b;color:white;flex:1;min-width:180px}
-.card{background:#1e293b;padding:20px;border-radius:12px;margin:12px 0;border:1px solid #334155}
-.card a{color:#f8fafc;text-decoration:none;font-size:19px;font-weight:bold}
-.card a:hover{color:#93c5fd}
-.meta{color:#94a3b8;font-size:13px;margin-top:12px}
-h2{margin-top:30px;font-size:22px}
-.editorial{margin-top:12px;font-size:14px;line-height:1.5;color:#cbd5e1}
-.editorial p{margin:6px 0}
-.top-card{border-left:4px solid #60a5fa}
-.note{font-size:13px;color:#94a3b8}
-#status{color:#94a3b8;font-size:14px}
+:root{color-scheme:light;--ink:#182437;--muted:#64748b;--line:#e2e8f0;--accent:#1456a0;--surface:#fff;--background:#f5f7fb}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:126px}
+body{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--background);color:var(--ink);margin:0;line-height:1.55;-webkit-font-smoothing:antialiased}
+header{background:var(--surface);padding:19px max(24px,calc((100vw - 1160px)/2));border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:clamp(23px,3vw,30px);font-weight:800;letter-spacing:-.055em;line-height:1.15}
+header p{color:var(--muted);margin:6px 0 0;font-size:14px}
+.nav-shell{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 3px 14px rgba(21,40,70,.06)}
+.section-nav{max-width:1160px;margin:auto;display:flex;gap:5px;padding:10px 22px;overflow-x:auto;white-space:nowrap;scrollbar-width:thin}
+.section-nav a{color:#334155;text-decoration:none;font-size:13px;font-weight:650;padding:9px 13px;border-radius:9px;transition:background .15s,color .15s}
+.section-nav a:hover,.section-nav a:focus-visible,.section-nav a.current{background:#eaf2ff;color:#164f98}
+main{max-width:1160px;margin:auto;padding:22px 24px 70px}
+.controls{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:15px 0 22px;padding:13px;background:white;border:1px solid var(--line);border-radius:15px}
+button,input{padding:11px 15px;border-radius:9px;border:1px solid #cbd5e1;font:inherit;font-size:14px}
+button{background:#fff;color:#334155;cursor:pointer;font-weight:650}
+button:hover{background:#eef4fb}
+button.active{background:var(--accent);border-color:var(--accent);color:white}
+input{background:#fff;color:var(--ink);flex:1;min-width:190px;outline-offset:2px}
+input:focus{border-color:var(--accent);outline:2px solid #dbeafe}
+.card{background:var(--surface);padding:19px 21px;border-radius:13px;margin:10px 0;border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,23,42,.035)}
+.card a{color:#1b3f70;text-decoration:none;font-size:17px;font-weight:680;line-height:1.45}
+.card a:hover{text-decoration:underline;color:#0b5cb1}
+.card strong{font-size:17px;line-height:1.4;letter-spacing:-.012em}
+.card p{margin:10px 0 0}
+.card p a{font-size:14px!important;font-weight:500}
+.meta{color:var(--muted);font-size:12px;margin-top:10px}
+h2{margin:0 0 5px;font-size:clamp(21px,2.5vw,26px);font-weight:780;letter-spacing:-.035em;line-height:1.2}
+section.radar-section{padding-top:23px;margin-top:22px;border-top:1px solid #dce4ee;scroll-margin-top:110px}
+section.radar-section:first-of-type{margin-top:0;border-top:0;padding-top:7px}
+.note{font-size:13px;color:var(--muted);line-height:1.55;margin:5px 0 13px}
+#status{color:#53677f;font-size:13px;font-weight:550;margin:0}
+details{background:#f8fafc;border:1px solid var(--line);padding:11px 13px;border-radius:9px}
+summary{color:var(--accent);font-weight:650;font-size:14px}
+details ul{padding-left:20px;font-size:13px;color:#475569}
+details button{margin-top:9px;background:#e9f1ff;color:#174c8e;border-color:#cbdff9}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+@media(max-width:650px){header{padding:16px 18px}.section-nav{padding:8px 12px}.section-nav a{padding:9px 10px;font-size:12px}main{padding:14px 13px 50px}.controls{padding:10px;gap:7px}.controls button{flex:1;padding:10px 7px}.controls input{width:100%;flex-basis:100%}.card{padding:16px}.card a,.card strong{font-size:16px}section.radar-section{margin-top:15px;padding-top:20px}html{scroll-padding-top:95px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -32,6 +50,7 @@ h2{margin-top:30px;font-size:22px}
 <h1>NEWSROOM RADAR</h1>
 <p>Osobni urednički radar | Hrvatska i svijet</p>
 </header>
+<nav class="nav-shell" aria-label="Izbornik rubrika"><div class="section-nav"><a href="#agenda-section">Kalendar</a><a href="#new-section">Novo</a><a href="#priorities-section">Urednički pregled</a><a href="#clusters-section">Više izvora</a><a href="#news-section">Sve vijesti</a></div></nav>
 <main>
 <p id="status">Učitavam vijesti...</p>
 <div class="controls">
@@ -40,7 +59,7 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<h2>Sutra na dnevnom redu</h2><p class="note">Početni urednički kalendar iz službenih najava. Ručno provjereno 14. listopada 2026.; još se ne osvježava automatski.</p><div id="agenda"></div><h2>Novo od posljednjeg pregleda</h2><p class="note">Novi članci od prethodnog otvaranja na ovom uređaju. Oznaka se sprema samo u ovom pregledniku.</p><div id="new-since"></div><h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
+<section class="radar-section" id="agenda-section" aria-label="Sutra na dnevnom redu"><h2>Sutra na dnevnom redu</h2><p class="note">Početni urednički kalendar iz službenih najava. Ručno provjereno 14. listopada 2026.; još se ne osvježava automatski.</p><div id="agenda"></div></section><section class="radar-section" id="new-section" aria-label="Novo od posljednjeg pregleda"><h2>Novo od posljednjeg pregleda</h2><p class="note">Novi članci od prethodnog otvaranja na ovom uređaju. Oznaka se sprema samo u ovom pregledniku.</p><div id="new-since"></div></section><section class="radar-section" id="priorities-section" aria-label="Za uredničku provjeru"><h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div></section><section class="radar-section" id="clusters-section" aria-label="Teme u više izvora"><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div></section><section class="radar-section" id="news-section" aria-label="Najnovije vijesti"><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div></section>
 </main>
 <script>
 let articles=[];
