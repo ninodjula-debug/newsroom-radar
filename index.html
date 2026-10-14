@@ -40,7 +40,7 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
+<h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
 </main>
 <script>
 let articles=[];
@@ -58,7 +58,7 @@ function makeCard(a){
 }
 const stop=new Set("the and for with from this that have will after about into over under hrvatska hrvatske hrvatski hrvatskoj danas jučer zbog nakon prije protiv prema koji koja koje kako kada gdje samo više novi nova novo zbog među iznad their says said amid are was were has had its his her what why who than but not one two three se su je da na za od do iz uz kao kod pri po te ili ali nije još već biti oko sve svi isto zbog dok".split(" "));
 function tokens(title){
- return new Set((title||"").toLocaleLowerCase("hr").normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").match(/[a-z0-9]{4,}/g)?.filter(w=>!stop.has(w))||[]);
+ return new Set((title||"").toLocaleLowerCase("hr").normalize("NFD").replace(/[\u0300-\u036f]/g,"").match(/[a-z0-9]{4,}/g)?.filter(w=>!stop.has(w))||[]);
 }
 function similarity(a,b){
  const A=tokens(a),B=tokens(b);
@@ -91,10 +91,27 @@ function renderClusters(items){
   root.append(card);
  }
 }
+function renderPriorities(items){
+ const root=document.getElementById("priorities");root.replaceChildren();
+ const exclude=/shopping|kupon|popust|snižen|modn|cipele|haljin|horoskop|recept|najljepš|showbiz|slingback|outfit|sponzoriran|promo|oglas|celebrity|recenzija filma|review –/i;
+ const eligible=items.filter(a=>!exclude.test(a.title||""));
+ const clusters=groupStories(eligible);
+ const ranked=clusters.map(g=>({g,stamp:Math.max(...g.map(a=>Date.parse(a.published_iso)||0))})).sort((a,b)=>b.g.length-a.g.length||b.stamp-a.stamp).slice(0,8);
+ if(!ranked.length){const p=document.createElement("p");p.className="note";p.textContent="Nema dovoljno potvrđenih podudaranja iz više izvora. Nećemo izmišljati uredničke prioritete.";root.append(p);return}
+ for(const {g} of ranked){
+  const card=document.createElement("article");card.className="card";
+  const title=document.createElement("strong");title.textContent=g[0].title;card.append(title);
+  const meta=document.createElement("div");meta.className="meta";meta.textContent="Za provjeru · "+g.length+" različita izvora · rangirano prema broju izvora";card.append(meta);
+  for(const a of g){let u;try{u=new URL(a.url);if(!["https:","http:"].includes(u.protocol))continue}catch(e){continue}
+   const p=document.createElement("p"),link=document.createElement("a");link.textContent=a.source+" — "+a.title;link.href=u.href;link.target="_blank";link.rel="noopener noreferrer";link.style.fontSize="14px";p.append(link);card.append(p)}
+  root.append(card);
+ }
+}
 function render(){
  const term=document.getElementById("search").value.toLocaleLowerCase("hr");
  const selected=articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term));
  document.getElementById("status").textContent="Prikazano "+selected.length+" od "+articles.length+" vijesti";
+ renderPriorities(selected);
  renderClusters(selected);
  const container=document.getElementById("news");container.replaceChildren();
  for(const a of selected){const card=makeCard(a);if(card)container.append(card)}
