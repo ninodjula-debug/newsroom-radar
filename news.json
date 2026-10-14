@@ -1,7 +1,431 @@
 {
-  "updated": "2026-10-14T13:28:16.019214+00:00",
+  "updated": "2026-10-14T13:53:02.932759+00:00",
   "count": 413,
   "articles": [
+    {
+      "title": "Rovarili po arheološkom nalazištu, ulovila ih policija: Kod kuće im našla blago",
+      "url": "https://www.vecernji.hr/vijesti/rovarili-po-arheoloskom-nalazistu-ulovila-ih-policija-kod-kuce-im-nasla-blago-2004270",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:52:00 +0000",
+      "published_iso": "2026-10-14T13:52:00+00:00"
+    },
+    {
+      "title": "Mišić (SDP): Iznimno je bitno da radnici ZET-a i ZG Holdinga imaju kolektivne ugovore",
+      "url": "https://n1info.hr/vijesti/misic-sdp-iznimno-je-bitno-da-radnici-zet-a-i-zg-holdinga-imaju-kolektivne-ugovore/",
+      "source": "N1 Hrvatska",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:51:43 +0200",
+      "published_iso": "2026-10-14T13:51:43+00:00"
+    },
+    {
+      "title": "Netflix is laying off roughly 6% of its workforce",
+      "url": "https://www.cnbc.com/2026/10/14/netflix-layoffs.html",
+      "source": "CNBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:51:21 GMT",
+      "published_iso": "2026-10-14T13:51:21+00:00"
+    },
+    {
+      "title": "Escalating conflict in Yemen as Houthis say seized new strategic area",
+      "url": "https://www.france24.com/en/video/20261014-escalating-conflict-in-yemen-as-houthis-say-seized-new-strategic-area",
+      "source": "France 24",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:50:37 GMT",
+      "published_iso": "2026-10-14T13:50:37+00:00"
+    },
+    {
+      "title": "Zagreb pred cijelom EU iznio osam zahtjeva koje Crna Gora mora ispuniti želi li postati članica",
+      "url": "https://www.telegram.hr/politika-kriminal/zagreb-pred-cijelom-eu-iznio-osam-zahtjeva-koje-crna-gora-mora-ispuniti-zeli-li-postati-clanica/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:50:07 +0000",
+      "published_iso": "2026-10-14T13:50:07+00:00"
+    },
+    {
+      "title": "Četiri vina, četiri različita karaktera: Meneghetti vina stigli su na stolove restorana Korčula",
+      "url": "https://www.vecernji.hr/lifestyle/cetiri-vina-cetiri-razlicita-karaktera-meneghetti-vina-stigli-su-na-stolove-restorana-korcula-2004114",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:50:00 +0000",
+      "published_iso": "2026-10-14T13:50:00+00:00"
+    },
+    {
+      "title": "Duane Davis sentenced to minimum 40 years for Tupac killing",
+      "url": "https://www.france24.com/en/video/20261014-duane-davis-sentenced-to-minimum-40-years-for-tupac-killing",
+      "source": "France 24",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:48:46 GMT",
+      "published_iso": "2026-10-14T13:48:46+00:00"
+    },
+    {
+      "title": "Hrvatski rukometaši uskoro su opet na okupu, izbornik Dagur objavio je popis za predstojeće utakmice",
+      "url": "https://www.telegram.hr/telesport/na-prvu/hrvatski-rukometasi-uskoro-su-opet-na-okupu-izbornik-dagur-objavio-je-popis-za-predstojece-utakmice/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:48:20 +0000",
+      "published_iso": "2026-10-14T13:48:20+00:00"
+    },
+    {
+      "title": "Slika bundeve pokojne umjetnice Yayoi Kusame prodana je za više od sedam milijuna eura",
+      "url": "https://www.telegram.hr/zivot/slika-bundeve-pokojne-umjetnice-yayoi-kusame-prodana-je-za-vise-od-sedam-milijuna-eura/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:48:05 +0000",
+      "published_iso": "2026-10-14T13:48:05+00:00"
+    },
+    {
+      "title": "10-year Treasury yield jumps as September core inflation comes in hotter than expected",
+      "url": "https://www.cnbc.com/2026/10/14/us-treasury-yields-cpi-inflation-report.html",
+      "source": "CNBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:48:01 GMT",
+      "published_iso": "2026-10-14T13:48:01+00:00"
+    },
+    {
+      "title": "Crna Gora napravila korak prema rješavanju jednog od spornih pitanja s Hrvatskom",
+      "url": "https://www.tportal.hr/vijesti/clanak/crna-gora-napravila-korak-prema-rjesavanju-jednog-od-spornih-pitanja-s-hrvatskom-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:48:00 +0200",
+      "published_iso": "2026-10-14T13:48:00+00:00"
+    },
+    {
+      "title": "MORH traži 415 ljudi za vojsku, poznato tko se sve može prijaviti",
+      "url": "https://www.vecernji.hr/vijesti/morh-trazi-415-ljudi-za-vojsku-poznato-tko-se-sve-moze-prijaviti-2004269",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:48:00 +0000",
+      "published_iso": "2026-10-14T13:48:00+00:00"
+    },
+    {
+      "title": "Entire Swedish reality show season lost weeks before premiere amid disputed AI claims",
+      "url": "https://www.euronews.com/2026/10/14/entire-swedish-reality-show-season-lost-weeks-before-premiere-amid-disputed-ai-claims",
+      "source": "Euronews",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 15:46:12 +0200",
+      "published_iso": "2026-10-14T13:46:12+00:00"
+    },
+    {
+      "title": "Consumer prices rose 3.7% annually in September as gas costs skyrocket",
+      "url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html",
+      "source": "CNBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:45:40 GMT",
+      "published_iso": "2026-10-14T13:45:40+00:00"
+    },
+    {
+      "title": "France’s Mélenchon sees Spain’s Sánchez as inspiration for fixing public finances",
+      "url": "https://www.politico.eu/article/france-melenchon-spain-sanchez-inspiration-fixing-public-finances/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "Politico Europe",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:44:43 +0000",
+      "published_iso": "2026-10-14T13:44:43+00:00"
+    },
+    {
+      "title": "Fujifilm’s new square format instant camera adds analog color filters",
+      "url": "https://www.theverge.com/tech/1010990/fujifilm-instax-square-2-analog-instant-film-camera-filters",
+      "source": "The Verge",
+      "category": "Svijet",
+      "published": "2026-10-14T09:43:36-04:00",
+      "published_iso": "2026-10-14T13:43:36+00:00"
+    },
+    {
+      "title": "Gledali smo napeti ratni triler o prognozi vremena koja je usmjerila tijek Dana D",
+      "url": "https://www.index.hr/chill/clanak/gledali-smo-napeti-ratni-triler-o-prognozi-vremena-koja-je-usmjerila-tijek-dana-d/2845591.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:43:00 +0200",
+      "published_iso": "2026-10-14T13:43:00+00:00"
+    },
+    {
+      "title": "Maksimir bi sutra mogao biti poluprazan",
+      "url": "https://www.index.hr/sport/clanak/maksimir-bi-sutra-mogao-biti-poluprazan/2845600.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:43:00 +0200",
+      "published_iso": "2026-10-14T13:43:00+00:00"
+    },
+    {
+      "title": "MORH traži 415 ljudi za Hrvatsku vojsku. Evo tko se može prijaviti",
+      "url": "https://www.index.hr/vijesti/clanak/morh-trazi-415-ljudi-za-hrvatsku-vojsku-evo-tko-se-moze-prijaviti/2845604.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:43:00 +0200",
+      "published_iso": "2026-10-14T13:43:00+00:00"
+    },
+    {
+      "title": "Christina Aguilera otvoreno progovorila o intimi: Jedno priznanje posebno je iznenadilo",
+      "url": "https://www.tportal.hr/showtime/clanak/christina-aguilera-otvoreno-progovorila-o-intimi-jedno-priznanje-posebno-je-iznenadilo-foto-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:43:00 +0200",
+      "published_iso": "2026-10-14T13:43:00+00:00"
+    },
+    {
+      "title": "FOTO U vilu je ušla vatrena Slovenka! Bivša misica vozi motor, voli adrenalin i živjela je na tri kontinenta",
+      "url": "https://www.vecernji.hr/showbiz/foto-u-vilu-je-usla-vatrena-slovenka-bivsa-misica-vozi-motor-voli-adrenalin-i-zivjela-je-na-tri-kontinenta-2004256",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:43:00 +0000",
+      "published_iso": "2026-10-14T13:43:00+00:00"
+    },
+    {
+      "title": "We might not have to wait 13 years for the next GTA",
+      "url": "https://www.theverge.com/games/1011028/next-gta-faster-development",
+      "source": "The Verge",
+      "category": "Svijet",
+      "published": "2026-10-14T09:42:29-04:00",
+      "published_iso": "2026-10-14T13:42:29+00:00"
+    },
+    {
+      "title": "Germany: Supporters rally in Hamburg as trial opens over Nord Stream pipeline blasts",
+      "url": "https://www.euronews.com/video/2026/10/14/germany-supporters-rally-in-hamburg-as-trial-opens-over-nord-stream-pipeline-blasts",
+      "source": "Euronews",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 15:42:25 +0200",
+      "published_iso": "2026-10-14T13:42:25+00:00"
+    },
+    {
+      "title": "Pet mogućih razloga zašto vaš pas ne želi izaći van",
+      "url": "https://www.index.hr/ljubimci/clanak/pet-mogucih-razloga-zasto-vas-pas-ne-zeli-izaci-van/2845535.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:42:00 +0200",
+      "published_iso": "2026-10-14T13:42:00+00:00"
+    },
+    {
+      "title": "10 znakova da vas muškarac iskorištava",
+      "url": "https://www.index.hr/magazin/clanak/10-znakova-da-vas-muskarac-iskoristava/2845546.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:42:00 +0200",
+      "published_iso": "2026-10-14T13:42:00+00:00"
+    },
+    {
+      "title": "VIDEO Zagrebačka policija traži ovog muškarca",
+      "url": "https://www.index.hr/vijesti/clanak/video-zagrebacka-policija-trazi-ovog-muskarca/2845599.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:42:00 +0200",
+      "published_iso": "2026-10-14T13:42:00+00:00"
+    },
+    {
+      "title": "Hrvatska poslala dokument članicama EU: Ovo je 8 otvorenih pitanja bez kojih Crna Gora ne može u Uniju",
+      "url": "https://www.vecernji.hr/vijesti/hrvatska-poslala-dokument-clanicama-eu-ovo-je-8-otvorenih-pitanja-bez-kojih-crna-gora-ne-moze-u-uniju-2004268",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:42:00 +0000",
+      "published_iso": "2026-10-14T13:42:00+00:00"
+    },
+    {
+      "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+      "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:41:51 GMT",
+      "published_iso": "2026-10-14T13:41:51+00:00"
+    },
+    {
+      "title": "Hrvatska traži od Crne Gore rješavanje osam otvorenih pitanja prije ulaska u EU",
+      "url": "https://vijesti.hrt.hr/eu/hrvatska-trazi-od-crne-gore-rjesavanje-osam-otvorenih-pitanja-prije-ulaska-u-eu-12956878",
+      "source": "HRT",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:41:34 +0000",
+      "published_iso": "2026-10-14T13:41:34+00:00"
+    },
+    {
+      "title": "Dijetetičarka otkrila što bi majke trebale jesti tijekom dojenja",
+      "url": "https://www.index.hr/mame/clanak/dijeteticarka-otkrila-sto-bi-majke-trebale-jesti-tijekom-dojenja/2845570.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:41:00 +0200",
+      "published_iso": "2026-10-14T13:41:00+00:00"
+    },
+    {
+      "title": "U San Franciscu se održavaju borbe robota koji su opremljeni oružjem",
+      "url": "https://www.telegram.hr/zivot/borbe-robota-san-francisco/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:40:39 +0000",
+      "published_iso": "2026-10-14T13:40:39+00:00"
+    },
+    {
+      "title": "US inflation rises more than expected ahead of midterm elections",
+      "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:40:36 GMT",
+      "published_iso": "2026-10-14T13:40:36+00:00"
+    },
+    {
+      "title": "EU says ‘no indication’ intelligence sharing with Ukraine has stopped as Russian attacks leave 600,000 without power – Europe live",
+      "url": "https://www.theguardian.com/world/live/2026/oct/14/russia-ukraine-war-latest-updates-zelenskyy-europe",
+      "source": "The Guardian",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:40:28 GMT",
+      "published_iso": "2026-10-14T13:40:28+00:00"
+    },
+    {
+      "title": "U zagrebačkoj katedrali pronađeni dijelovi nadgrobne ploče starog 500 godina",
+      "url": "https://www.index.hr/vijesti/clanak/u-zagrebackoj-katedrali-pronadjeni-dijelovi-nadgrobne-ploce-starog-500-godina/2845603.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:40:00 +0200",
+      "published_iso": "2026-10-14T13:40:00+00:00"
+    },
+    {
+      "title": "Obnova zagrebačke katedrale donijela nova otkrića",
+      "url": "https://www.tportal.hr/kultura/clanak/zagrebacka-katedrala-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:40:00 +0200",
+      "published_iso": "2026-10-14T13:40:00+00:00"
+    },
+    {
+      "title": "Sigurdsson objavio popis igrača na koje računa za dvije bitne utakmice: Ostao bez jakog aduta",
+      "url": "https://www.vecernji.hr/sport/sigurdsson-objavio-popis-igraca-na-koje-racuna-za-dvije-bitne-utakmice-otpao-mu-bitan-adut-2004265",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:38:00 +0000",
+      "published_iso": "2026-10-14T13:38:00+00:00"
+    },
+    {
+      "title": "Guillaume Canet and Marion Cotillard reunite on the silver screen in thriller 'Karma'",
+      "url": "https://www.france24.com/en/tv-shows/arts24/20261014-guillaume-canet-and-marion-cotillard-reunite-on-the-silver-screen-in-thriller-karma",
+      "source": "France 24",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:34:43 GMT",
+      "published_iso": "2026-10-14T13:34:43+00:00"
+    },
+    {
+      "title": "Ovaj hrvatski grad će plaćati građanima za prijavu ilegalnog odlaganja otpada: Nagrada je pola kazne",
+      "url": "https://n1info.hr/vijesti/ovaj-hrvatski-grad-ce-placati-gradjanima-za-prijavu-ilegalnog-odlaganja-otpada-nagrada-je-pola-kazne/",
+      "source": "N1 Hrvatska",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:34:16 +0200",
+      "published_iso": "2026-10-14T13:34:16+00:00"
+    },
+    {
+      "title": "Ukrainian military’s access to Starlink satellite internet suddenly restricted",
+      "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
+      "source": "The Guardian",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:33:56 GMT",
+      "published_iso": "2026-10-14T13:33:56+00:00"
+    },
+    {
+      "title": "Bank of America shares drop 7% after third-quarter revenue miss and regulatory penalty",
+      "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
+      "source": "CNBC World",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:33:39 GMT",
+      "published_iso": "2026-10-14T13:33:39+00:00"
+    },
+    {
+      "title": "Varaždinska županija povećala ovogodišnji proračun za 11 posto",
+      "url": "https://www.poslovni.hr/financije/varazdinska-zupanija-povecala-ovogodisnji-proracun-za-11-posto-4559448",
+      "source": "Poslovni dnevnik",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:33:00 +0000",
+      "published_iso": "2026-10-14T13:33:00+00:00"
+    },
+    {
+      "title": "Siegmunds Machtplan in Gefahr",
+      "url": "https://www.politico.eu/podcast/inside-afd/siegmunds-machtplan-in-gefahr/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
+      "source": "Politico Europe",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:32:42 +0000",
+      "published_iso": "2026-10-14T13:32:42+00:00"
+    },
+    {
+      "title": "Closer EU trade ties greater prize for UK than making separate deals, minister says",
+      "url": "https://www.theguardian.com/politics/2026/oct/14/closer-eu-trade-ties-uk-europe-douglas-alexander",
+      "source": "The Guardian",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:31:55 GMT",
+      "published_iso": "2026-10-14T13:31:55+00:00"
+    },
+    {
+      "title": "Procurio sastav Hajduka za Ajax: Gonzalo Garcia ima samo jednu dvojbu",
+      "url": "https://www.tportal.hr/sport/clanak/procurio-sastav-hajduka-za-ajax-gonzalo-garcia-ima-samo-jednu-dvojbu-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:31:00 +0200",
+      "published_iso": "2026-10-14T13:31:00+00:00"
+    },
+    {
+      "title": "Srpski kamiondžija pao na Bajakovu: carinike alarmirala RTG snimka, našli mu hrpu tableta i rakiju",
+      "url": "https://www.telegram.hr/vijesti/srpski-kamiondzija-pao-na-bajakovu-carinike-alarmirala-rtg-snimka-nasli-mu-hrpu-tableta-i-rakiju/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:30:41 +0000",
+      "published_iso": "2026-10-14T13:30:41+00:00"
+    },
+    {
+      "title": "Poznati španjolski novinar ne može vjerovati što Mourinho radi u Realu: 'To nije normalno, nevjerojatno je!'",
+      "url": "https://www.tportal.hr/sport/clanak/poznati-spanjolski-novinar-ne-moze-vjerovati-sto-mourinho-radi-u-realu-to-nije-normalno-nevjerojatno-je-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:30:00 +0200",
+      "published_iso": "2026-10-14T13:30:00+00:00"
+    },
+    {
+      "title": "Hyundai otkrio novi BAYON: Kompaktni SUV sada nudi više prostora, moderne tehnologije i potpuno drukčiji dizajn",
+      "url": "https://www.tportal.hr/autozona/clanak/hyundai-otkrio-novi-bayon-kompaktni-suv-sada-nudi-vise-prostora-moderne-tehnologije-i-potpuno-drukciji-dizajn-foto-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:30:00 +0200",
+      "published_iso": "2026-10-14T13:30:00+00:00"
+    },
+    {
+      "title": "Ove tri rečenice mogu otkriti da muškarac ne želi ozbiljnu vezu: Nemojte ih ignorirati",
+      "url": "https://www.vecernji.hr/lifestyle/ove-tri-recenice-mogu-otkriti-da-muskarac-ne-zeli-ozbiljnu-vezu-nemojte-ih-ignorirati-2004184",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:30:00 +0000",
+      "published_iso": "2026-10-14T13:30:00+00:00"
+    },
+    {
+      "title": "Izašla pozadina bizarne drame u Boeingu kojeg je u zraku presreo hrvatski Rafale",
+      "url": "https://www.telegram.hr/vijesti/izasla-pozadina-bizarne-drame-u-boeingu-kojeg-je-u-zraku-presreo-hrvatski-rafale/",
+      "source": "Telegram",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:29:23 +0000",
+      "published_iso": "2026-10-14T13:29:23+00:00"
+    },
+    {
+      "title": "Stanari čuli mjaukanje s bora na Trešnjevki, ekipa iz Dumovca imala je što vidjeti: 'Priča ima najljepši mogući kraj'",
+      "url": "https://www.vecernji.hr/zagreb/stanari-culi-mjaukanje-s-bora-na-tresnjevki-ekipa-iz-dumovca-imala-je-sto-vidjeti-prica-ima-najljepsi-moguci-kraj-2004135",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:29:00 +0000",
+      "published_iso": "2026-10-14T13:29:00+00:00"
+    },
+    {
+      "title": "UK restaurateur claims losses after video calling for Gaza destruction",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/uk-restaurateur-claims-losses-after-video-calling-for-gaza-destruction?traffic_source=rss",
+      "source": "Al Jazeera",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:28:21 +0000",
+      "published_iso": "2026-10-14T13:28:21+00:00"
+    },
+    {
+      "title": "Vozač u kamionu za Irsku skrivao više od 83 tisuće tableta i domaću rakiju",
+      "url": "https://www.vecernji.hr/vijesti/srbin-u-kamionu-za-irsku-skrivao-vise-od-83-tisuce-tableta-i-domacu-rakiju-2004266",
+      "source": "Večernji list",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 13:28:00 +0000",
+      "published_iso": "2026-10-14T13:28:00+00:00"
+    },
+    {
+      "title": "Locking UK out of ‘Made in Europe’ law will ‘hurt’ carmaking across EU, says Mercedes-Benz boss",
+      "url": "https://www.theguardian.com/world/2026/oct/14/uk-made-in-europe-law-hurt-carmaking-eu-mercedes-benz-boss-ola-kallenius",
+      "source": "The Guardian",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:26:42 GMT",
+      "published_iso": "2026-10-14T13:26:42+00:00"
+    },
     {
       "title": "Holidays remain a ‘spending priority’, but ‘cost-conscious’ travel is on the rise, report reveals",
       "url": "https://www.euronews.com/2026/10/14/holidays-remain-a-spending-priority-but-cost-conscious-travel-is-on-the-rise-report-reveal",
@@ -9,6 +433,30 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 15:26:24 +0200",
       "published_iso": "2026-10-14T13:26:24+00:00"
+    },
+    {
+      "title": "Imaju 103 pobjede zaredom u prvenstvu, a danas hvataju drugu u Ligi prvaka. Guinnessova knjiga ih ne priznaje...",
+      "url": "https://www.tportal.hr/sport/clanak/imaju-103-pobjede-zaredom-u-prvenstvu-a-danas-hvataju-drugu-u-ligi-prvaka-guinnessova-knjiga-ih-ne-priznaje-20261014",
+      "source": "Tportal",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:26:00 +0200",
+      "published_iso": "2026-10-14T13:26:00+00:00"
+    },
+    {
+      "title": "'A completely civilian area': Kyiv residents reel after overnight Russian strike – video",
+      "url": "https://www.theguardian.com/world/video/2026/oct/14/a-completely-civilian-area-kyiv-residents-reel-after-overnight-russian-strike-video",
+      "source": "The Guardian Europe",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:25:41 GMT",
+      "published_iso": "2026-10-14T13:25:41+00:00"
+    },
+    {
+      "title": "How AI apps are offering free substitutes for Big Tech software",
+      "url": "https://www.aljazeera.com/news/2026/10/14/how-ai-apps-are-offering-free-substitutes-for-big-tech-software?traffic_source=rss",
+      "source": "Al Jazeera",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:25:35 +0000",
+      "published_iso": "2026-10-14T13:25:35+00:00"
     },
     {
       "title": "FBI arrests Saudi OpenAI employee who allegedly planted recording device in conference room",
@@ -19,6 +467,14 @@
       "published_iso": "2026-10-14T13:25:24+00:00"
     },
     {
+      "title": "De Bruyne ignorirao Allegrijeve upute za vrijeme utakmice: \"Kevin se nije ni okrenuo\"",
+      "url": "https://www.index.hr/sport/clanak/de-bruyne-ignorirao-allegrijeve-upute-za-vrijeme-utakmice-kevin-se-nije-ni-okrenuo/2845598.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:25:00 +0200",
+      "published_iso": "2026-10-14T13:25:00+00:00"
+    },
+    {
       "title": "Mišić: Iznimno bitno da radnici ZET-a i ZG Holdinga imaju kolektivne ugovore",
       "url": "https://vijesti.hrt.hr/hrvatska/misic-iznimno-bitno-da-radnici-zet-a-i-zg-holdinga-imaju-kolektivne-ugovore-12956852",
       "source": "HRT",
@@ -27,20 +483,36 @@
       "published_iso": "2026-10-14T13:24:05+00:00"
     },
     {
-      "title": "Varaždinska županija povećala ovogodišnji proračun za 11 posto",
-      "url": "https://www.poslovni.hr/financije/varazdinska-zupanija-povecala-ovogodisnji-proracun-za-11-posto-4559448",
-      "source": "Poslovni dnevnik",
+      "title": "Stigao je novi val pogodnosti za HT korisnike. Ovo vrijedi provjeriti",
+      "url": "https://www.index.hr/magazin/clanak/stigao-je-novi-val-pogodnosti-za-ht-korisnike-ovo-vrijedi-provjeriti/2844564.aspx",
+      "source": "Index",
       "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:23:00 +0000",
+      "published": "Wed, 14 Oct 2026 15:23:00 +0200",
       "published_iso": "2026-10-14T13:23:00+00:00"
     },
     {
-      "title": "10-year Treasury yield jumps as September core inflation comes in hotter than expected",
-      "url": "https://www.cnbc.com/2026/10/14/us-treasury-yields-cpi-inflation-report.html",
-      "source": "CNBC World",
+      "title": "Russia arrests Japanese journalist on suspicion of ‘espionage’",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/russia-arrests-japanese-journalist-on-suspicion-of?traffic_source=rss",
+      "source": "Al Jazeera",
       "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 13:19:49 GMT",
-      "published_iso": "2026-10-14T13:19:49+00:00"
+      "published": "Wed, 14 Oct 2026 13:22:46 +0000",
+      "published_iso": "2026-10-14T13:22:46+00:00"
+    },
+    {
+      "title": "Medvedev: Zelena uš je bijesna. Što je očekivala?",
+      "url": "https://www.index.hr/vijesti/clanak/medvedev-zelena-us-je-bijesna-sto-je-ocekivala/2845597.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:21:00 +0200",
+      "published_iso": "2026-10-14T13:21:00+00:00"
+    },
+    {
+      "title": "Pogledajte pretjecanje preko pune crte u zavoju u Đakovu",
+      "url": "https://www.index.hr/vijesti/clanak/video-pogledajte-opasno-pretjecanje-u-zavoju-u-djakovu/2845592.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:19:00 +0200",
+      "published_iso": "2026-10-14T13:19:00+00:00"
     },
     {
       "title": "Ukrajinci o sabotaži Sjevernog toka: 'Bio je legitimna meta. Za nas je to bio spas'",
@@ -75,6 +547,22 @@
       "published_iso": "2026-10-14T13:18:02+00:00"
     },
     {
+      "title": "What we know about OpenAI engineer arrested over office spying",
+      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/what-we-know-about-openai-engineer-arrested-over-office-spying?traffic_source=rss",
+      "source": "Al Jazeera",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:18:02 +0000",
+      "published_iso": "2026-10-14T13:18:02+00:00"
+    },
+    {
+      "title": "Sergej Poposki zapjevao za više od 200 poduzetnika i diplomata u Zagrebu",
+      "url": "https://www.index.hr/magazin/clanak/sergej-poposki-zapjevao-za-vise-od-200-poduzetnika-i-diplomata-u-zagrebu/2845595.aspx",
+      "source": "Index",
+      "category": "Hrvatska",
+      "published": "Wed, 14 Oct 2026 15:18:00 +0200",
+      "published_iso": "2026-10-14T13:18:00+00:00"
+    },
+    {
       "title": "AI groznica puni blagajnu ključnog proizvođača opreme za čipove: Prihod skočio 55 posto",
       "url": "https://www.tportal.hr/biznis/clanak/ai-groznica-puni-blagajnu-kljucnog-proizvodaca-opreme-za-cipove-prihod-skocio-55-posto-20261014",
       "source": "Tportal",
@@ -91,12 +579,36 @@
       "published_iso": "2026-10-14T13:18:00+00:00"
     },
     {
+      "title": "Iran targets Starlink as ‘tool of war’ with hints of more internet curbs",
+      "url": "https://www.aljazeera.com/news/2026/10/14/iran-targets-starlink-as-tool-of-war-with-hints-at-internet-restrictions?traffic_source=rss",
+      "source": "Al Jazeera",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:17:34 +0000",
+      "published_iso": "2026-10-14T13:17:34+00:00"
+    },
+    {
+      "title": "Guinea-Bissau denies it has approved controversial vaccine trial in newborns",
+      "url": "https://www.theguardian.com/world/2026/oct/14/guinea-bissau-vaccine-hepatitis-b-trial-denial",
+      "source": "The Guardian",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:16:30 GMT",
+      "published_iso": "2026-10-14T13:16:30+00:00"
+    },
+    {
       "title": "RTG otkrio skriveni teret: U kamionu pronađeno više od 83.000 tableta",
       "url": "https://vijesti.hrt.hr/hrvatska/rtg-otrkrio-skriveni-teret-u-kamionu-pronadeno-vise-od-83000-tableta-12956833",
       "source": "HRT",
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 13:16:27 +0000",
       "published_iso": "2026-10-14T13:16:27+00:00"
+    },
+    {
+      "title": "Commissioners Kubilius and Lahbib strengthen global disaster risk management through space technologies",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2164",
+      "source": "European Commission",
+      "category": "Svijet",
+      "published": "Wed, 14 Oct 2026 13:14:21 GMT",
+      "published_iso": "2026-10-14T13:14:21+00:00"
     },
     {
       "title": "VIDEO Buknuo veliki požar na Ugljanu: Gori skladište poznate tvrtke",
@@ -179,14 +691,6 @@
       "published_iso": "2026-10-14T13:07:18+00:00"
     },
     {
-      "title": "Consumer prices rose at 3.7% annual rate in September as gas costs skyrocket",
-      "url": "https://www.cnbc.com/2026/10/14/cpi-inflation-report-september-2026.html",
-      "source": "CNBC World",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 13:06:23 GMT",
-      "published_iso": "2026-10-14T13:06:23+00:00"
-    },
-    {
       "title": "Torcida se posebno sprema za Hajduk u Europi. Uoči Ajaxa organizira veliki korteo do Poljuda",
       "url": "https://www.telegram.hr/telesport/na-prvu/torcida-se-posebno-sprema-za-hajduk-u-europi-uoci-ajaxa-organizira-veliki-korteo-do-poljuda/",
       "source": "Telegram",
@@ -235,14 +739,6 @@
       "published_iso": "2026-10-14T13:03:16+00:00"
     },
     {
-      "title": "EU says ‘no indication’ intelligence sharing with Ukraine has stopped as Russian attacks leave 600,000 without power – Europe live",
-      "url": "https://www.theguardian.com/world/live/2026/oct/14/russia-ukraine-war-latest-updates-zelenskyy-europe",
-      "source": "The Guardian",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 13:02:31 GMT",
-      "published_iso": "2026-10-14T13:02:31+00:00"
-    },
-    {
       "title": "UEFA žestoko kaznila HNS zbog incidenta na Poljudu u utakmici sa Španjolskom",
       "url": "https://www.vecernji.hr/sport/uefa-zestoko-kaznila-hns-zbog-incidenta-na-poljudu-u-utakmici-sa-spanjolskom-2004258",
       "source": "Večernji list",
@@ -267,7 +763,7 @@
       "published_iso": "2026-10-14T13:00:16+00:00"
     },
     {
-      "title": "Tko ima veće šanse doživjeti stotu, vegetarijanci ili mesojedi? Evo što kaže studija",
+      "title": "Ljudi koji jedu meso češće dožive 100. godinu? Postoji važna caka",
       "url": "https://www.index.hr/fit/clanak/tko-ima-vece-sanse-dozivjeti-stotu-vegetarijanci-ili-mesojedi-evo-sto-kaze-studija/2845590.aspx",
       "source": "Index",
       "category": "Hrvatska",
@@ -379,14 +875,6 @@
       "published_iso": "2026-10-14T12:59:00+00:00"
     },
     {
-      "title": "Trump's diesel dilemma — by the numbers",
-      "url": "https://www.cnbc.com/2026/10/14/trumps-diesel-dilemma-by-the-numbers.html",
-      "source": "CNBC World",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 12:58:53 GMT",
-      "published_iso": "2026-10-14T12:58:53+00:00"
-    },
-    {
       "title": "French MPs back bill to tackle sexual and gender-based violence",
       "url": "https://www.france24.com/en/tv-shows/entre-nous/20261014-french-mps-back-bill-to-tackle-sexual-and-gender-based-violence",
       "source": "France 24",
@@ -441,14 +929,6 @@
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 14:55:00 +0200",
       "published_iso": "2026-10-14T12:55:00+00:00"
-    },
-    {
-      "title": "Bank of America shares drop 7% after third-quarter revenue miss and regulatory penalty",
-      "url": "https://www.cnbc.com/2026/10/14/bank-of-america-bac-q3-2026-earnings.html",
-      "source": "CNBC World",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 12:54:01 GMT",
-      "published_iso": "2026-10-14T12:54:01+00:00"
     },
     {
       "title": "Policajci na njivi kod Vukovara zatekli neobičnu ekipu s detektorom metala. Kad su shvatili što rade, odmah su ih pohapsili",
@@ -523,7 +1003,7 @@
       "published_iso": "2026-10-14T12:50:54+00:00"
     },
     {
-      "title": "Iraq PM tells Saudi Crown Prince Iraqi territory won’t be used for attacks",
+      "title": "Iraq’s PM tells Saudi crown prince Iraqi territory will not be used for attacks",
       "url": "https://www.aljazeera.com/news/2026/10/14/iraq-pm-tells-saudi-crown-prince-iraqi-territory-wont-be-used-for-attacks?traffic_source=rss",
       "source": "Al Jazeera",
       "category": "Svijet",
@@ -579,28 +1059,12 @@
       "published_iso": "2026-10-14T12:46:00+00:00"
     },
     {
-      "title": "Kriza u \"crvenim vragovima\", svjetski prvak poručio: Stalno mijenjamo trenera, ali što je s drugim područjima?",
-      "url": "https://www.vecernji.hr/sport/kriza-u-crvenim-vragovima-svjetski-prvak-porucio-stalno-mijenjamo-trenera-ali-sto-je-s-drugim-podrucjima-2004219",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:46:00 +0000",
-      "published_iso": "2026-10-14T12:46:00+00:00"
-    },
-    {
       "title": "Premijer je oko Gospića u Saboru izveo infantilan i nedostojan skeč. Zato je ostavio ovako katastrofalan dojam",
       "url": "https://www.telegram.hr/komentari/premijer-je-oko-gospica-u-saboru-izveo-infantilan-i-nedostojan-skec-zato-je-ostavio-ovako-katastrofalan-dojam/",
       "source": "Telegram",
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 12:45:52 +0000",
       "published_iso": "2026-10-14T12:45:52+00:00"
-    },
-    {
-      "title": "Otkrili zašto je hrvatski Rafale dignut da presretne putnički avion",
-      "url": "https://www.vecernji.hr/vijesti/digli-se-rafalei-i-eurofighteri-zbog-moguce-otmice-zrakoplova-policija-sada-objavila-sto-se-dogodilo-2004251",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:45:00 +0000",
-      "published_iso": "2026-10-14T12:45:00+00:00"
     },
     {
       "title": "Zbog pogreške u kokpitu podignuti borbeni avioni: Otkriveno što se dogodilo iznad Hrvatske",
@@ -627,22 +1091,6 @@
       "published_iso": "2026-10-14T12:43:00+00:00"
     },
     {
-      "title": "Pitali smo Hrvatske ceste hoće li ih Škorić i nakon priznanja krivnje i presude savjetovati za 3500 eura",
-      "url": "https://www.telegram.hr/politika-kriminal/pitali-smo-hrvatske-ceste-hoce-li-ih-skoric-i-nakon-priznanja-krivnje-i-presude-savjetovati-za-3500-eura/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:42:31 +0000",
-      "published_iso": "2026-10-14T12:42:31+00:00"
-    },
-    {
-      "title": "FOTO Internet se opasno ruga s Trumpovom veleposlanicom! Ljudi se pitaju: 'Je li ovo stvarno?'",
-      "url": "https://www.vecernji.hr/showbiz/foto-internet-se-opasno-ruga-s-trumpovom-veleposlanicom-ljudi-su-zaprepasteni-je-li-ovo-stvarno-2004158",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:40:00 +0000",
-      "published_iso": "2026-10-14T12:40:00+00:00"
-    },
-    {
       "title": "FOTO / Posljednji ispraćaj Gorana Bareta u Vinkovcima",
       "url": "https://n1info.hr/magazin/showbiz/foto-posljednji-ispracaj-gorana-bareta-u-vinkovcima/",
       "source": "N1 Hrvatska",
@@ -659,36 +1107,12 @@
       "published_iso": "2026-10-14T12:39:00+00:00"
     },
     {
-      "title": "Nova Trumpova veleposlanica izazvala šok na društvenim mrežama: Svi pričaju o njezinu izgledu",
-      "url": "https://www.tportal.hr/vijesti/clanak/nova-trumpova-veleposlanica-izazvala-sok-na-drustvenim-mrezama-svi-pricaju-o-njezinu-izgledu-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:39:00 +0200",
-      "published_iso": "2026-10-14T12:39:00+00:00"
-    },
-    {
       "title": "What we know about the Pope's lung cancer diagnosis",
       "url": "https://www.bbc.co.uk/news/videos/cwyvrmp9qgrgo?at_medium=RSS&at_campaign=rss",
       "source": "BBC Europe",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 12:37:33 GMT",
       "published_iso": "2026-10-14T12:37:33+00:00"
-    },
-    {
-      "title": "Predstavljen program 24. Zagreb Film Festivala",
-      "url": "https://www.tportal.hr/kultura/clanak/predstavljen-program-24-zff-a-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:35:00 +0200",
-      "published_iso": "2026-10-14T12:35:00+00:00"
-    },
-    {
-      "title": "Oporba protiv Pravilnika za privatne logopede: Zakinut će 7000 djece",
-      "url": "https://www.tportal.hr/vijesti/clanak/oporba-protiv-pravilnika-za-privatne-logopede-zakinut-ce-7000-djece-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:35:00 +0200",
-      "published_iso": "2026-10-14T12:35:00+00:00"
     },
     {
       "title": "Predstavljena Svjetska izložba EXPO 2027 u Beogradu, zasad bez hrvatskih izlagača",
@@ -715,38 +1139,6 @@
       "published_iso": "2026-10-14T12:31:36+00:00"
     },
     {
-      "title": "Paddington slavi 68 godina: Medvjedić s londonske postaje osvojio je generacije",
-      "url": "https://www.tportal.hr/lifestyle/clanak/paddington-slavi-68-godina-medvjedic-s-londonske-postaje-osvojio-je-generacije-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:30:00 +0200",
-      "published_iso": "2026-10-14T12:30:00+00:00"
-    },
-    {
-      "title": "Provela je pet dana u potpunom mraku, uplašilo ju ono što je doživjela: 'Bilo je poput mučenja'",
-      "url": "https://www.vecernji.hr/lifestyle/provela-je-pet-dana-u-potpunom-mraku-sokiralo-ju-ono-sto-je-dozivjela-bilo-je-poput-mucenja-2004071",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:30:00 +0000",
-      "published_iso": "2026-10-14T12:30:00+00:00"
-    },
-    {
-      "title": "'Pet mjeseci ne mogu popraviti jedan nadvožnjak': Zagrepčanin izgubio strpljenje",
-      "url": "https://www.vecernji.hr/zagreb/pet-mjeseci-ne-mogu-popraviti-jedan-nadvoznjak-zagrepcanin-izgubio-strpljenje-2004206",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:30:00 +0000",
-      "published_iso": "2026-10-14T12:30:00+00:00"
-    },
-    {
-      "title": "Stigao je novi Hyundai BAYON: Poznati SUV dobio potpuno drukčiji izgled i brojne novitete",
-      "url": "https://www.vecernji.hr/barkod/stigao-je-novi-hyundai-bayon-poznati-suv-dobio-potpuno-drukciji-izgled-i-brojne-novitete-2004247",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:29:00 +0000",
-      "published_iso": "2026-10-14T12:29:00+00:00"
-    },
-    {
       "title": "ZFF: Filmove ovogodišnjeg izdanja povezuje tema odgovornosti",
       "url": "https://n1info.hr/magazin/kultura/zff-filmove-ovogodisnjeg-izdanja-povezuje-tema-odgovornosti/",
       "source": "N1 Hrvatska",
@@ -771,44 +1163,12 @@
       "published_iso": "2026-10-14T12:28:06+00:00"
     },
     {
-      "title": "Vlada imenovala nove kadrove: Među njima i državnu tajnicu Ministarstva kulture",
-      "url": "https://www.tportal.hr/vijesti/clanak/vlada-imenovala-nove-kadrove-medu-njima-i-drzavnu-tajnicu-ministarstva-kulture-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:28:00 +0200",
-      "published_iso": "2026-10-14T12:28:00+00:00"
-    },
-    {
-      "title": "Vrijeme je da se PFAS zabrani: 'Vječne kemikalije' vječno ostaju u ljudskom organizmu, a što mu čine, slabije je istraženo",
-      "url": "https://www.vecernji.hr/vijesti/vrijeme-je-da-se-pfas-zabrani-vjecne-kemikalije-vjecno-ostaju-u-ljudskom-organizmu-a-sto-mu-cine-slabije-je-istrazeno-2003478",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:28:00 +0000",
-      "published_iso": "2026-10-14T12:28:00+00:00"
-    },
-    {
       "title": "EU-China trade progress welcomed, yet trust issues linger",
       "url": "https://www.politico.eu/article/eu-china-trade-progress-welcomed-yet-trust-issues-linger/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
       "source": "Politico Europe",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 12:27:27 +0000",
       "published_iso": "2026-10-14T12:27:27+00:00"
-    },
-    {
-      "title": "Oksana Zabužko: 'Bila sam užasnuta Zelenskim, ali sad nam treba glumac koji dobro glumi predsjednika'",
-      "url": "https://www.tportal.hr/kultura/clanak/oksana-zabuzko-bila-sam-uzasnuta-zelenskim-ali-sad-nam-treba-glumac-koji-dobro-glumi-predsjednika-foto-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:27:00 +0200",
-      "published_iso": "2026-10-14T12:27:00+00:00"
-    },
-    {
-      "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
-      "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 12:27:00 GMT",
-      "published_iso": "2026-10-14T12:27:00+00:00"
     },
     {
       "title": "‘From liabilities to goldmines’: refineries eye record profits from diesel shortage",
@@ -827,36 +1187,12 @@
       "published_iso": "2026-10-14T12:26:13+00:00"
     },
     {
-      "title": "Sigurdsson objavio popis igrača. Evo tko će igrati u kvalifikacijama za Euro",
-      "url": "https://www.tportal.hr/sport/clanak/sigurdsson-objavio-popis-igraca-evo-tko-ce-igrati-u-kvalifikacijama-za-euro-20261014",
-      "source": "Tportal",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:26:00 +0200",
-      "published_iso": "2026-10-14T12:26:00+00:00"
-    },
-    {
-      "title": "Glamur Premiershipa obična je farsa! Gotovo svi su u gubicima, opasno blizu bankrota...",
-      "url": "https://www.vecernji.hr/sport/glamur-premiershipa-obicna-je-farsa-gotovo-svi-su-u-gubicima-opasno-blizu-bankrota-2004178",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:25:00 +0000",
-      "published_iso": "2026-10-14T12:25:00+00:00"
-    },
-    {
       "title": "Vatikan: Papa proveo mirnu noć u bolnici nakon operacije",
       "url": "https://vijesti.hrt.hr/svijet/vatikan-papa-proveo-mirnu-noc-u-bolnici-nakon-operacije-12956437",
       "source": "HRT",
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 12:24:28 +0000",
       "published_iso": "2026-10-14T12:24:28+00:00"
-    },
-    {
-      "title": "Znanstvenici objasnili: Nitko se ne može sjećati vlastitog rođenja",
-      "url": "https://www.vecernji.hr/vijesti/znanstvenici-objasnili-nitko-se-ne-moze-sjecati-vlastitog-rodenja-2004246",
-      "source": "Večernji list",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:24:00 +0000",
-      "published_iso": "2026-10-14T12:24:00+00:00"
     },
     {
       "title": "Piletić: \"Vlada se od prvog dana bavi Gospićem, a oporba samo širi dezinformacije\"",
@@ -867,8 +1203,8 @@
       "published_iso": "2026-10-14T12:22:45+00:00"
     },
     {
-      "title": "Lufthansa to become new TAP shareholder, Portuguese government says",
-      "url": "https://www.euronews.com/2026/10/14/lufthansa-to-become-new-tap-shareholder-portuguese-government-says",
+      "title": "Lufthansa to be new TAP shareholder, Portuguese government says",
+      "url": "https://www.euronews.com/2026/10/14/lufthansa-to-be-new-tap-shareholder-portuguese-government-says",
       "source": "Euronews",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 14:22:39 +0200",
@@ -883,20 +1219,12 @@
       "published_iso": "2026-10-14T12:22:17+00:00"
     },
     {
-      "title": "Guinea-Bissau denies it has approved controversial vaccine trial in newborns",
-      "url": "https://www.theguardian.com/world/2026/oct/14/guinea-bissau-vaccine-hepatitis-b-trial-denial",
-      "source": "The Guardian",
+      "title": "Louvre boss warns of closure risk without major renovations",
+      "url": "https://www.france24.com/en/live-news/20261014-louvre-boss-warns-of-closure-risk-without-major-renovations",
+      "source": "France 24",
       "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 12:21:16 GMT",
-      "published_iso": "2026-10-14T12:21:16+00:00"
-    },
-    {
-      "title": "Zaposlenici Hrvatskog Telekoma pošumljavali područje Rijeke uz pomoć dronova",
-      "url": "https://www.telegram.hr/partneri/zaposlenici-hrvatskog-telekoma-posumljavali-podrucje-rijeke-uz-pomoc-dronova/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:20:03 +0000",
-      "published_iso": "2026-10-14T12:20:03+00:00"
+      "published": "Wed, 14 Oct 2026 12:21:41 GMT",
+      "published_iso": "2026-10-14T12:21:41+00:00"
     },
     {
       "title": "Speech by Executive Vice-President Fitto at High Level Session   “A Cohesion Policy for a Competitive Union”",
@@ -939,52 +1267,12 @@
       "published_iso": "2026-10-14T12:16:00+00:00"
     },
     {
-      "title": "EU traži više novca za Ukrajinu. Neke države obećale pomoć, ali je nisu isporučile",
-      "url": "https://www.index.hr/vijesti/clanak/eu-trazi-vise-novca-za-ukrajinu-neke-drzave-obecale-pomoc-ali-je-nisu-isporucile/2845575.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:15:00 +0200",
-      "published_iso": "2026-10-14T12:15:00+00:00"
-    },
-    {
       "title": "Odrađeno više od 321.000 sati za opće dobro, zastupnici upozorili na važan nedostatak izvješća",
       "url": "https://n1info.hr/vijesti/odradjeno-vise-od-321-tisuce-sati-za-opce-dobro-zastupnici-upozorili-na-vazan-nedostatak-izvjesca/",
       "source": "N1 Hrvatska",
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 14:14:22 +0200",
       "published_iso": "2026-10-14T12:14:22+00:00"
-    },
-    {
-      "title": "Bjelica ima novi posao",
-      "url": "https://www.index.hr/sport/clanak/bjelica-ima-novi-posao/2845577.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:12:33 +0200",
-      "published_iso": "2026-10-14T12:12:33+00:00"
-    },
-    {
-      "title": "VIDEO Novi Vučićev predizborni spot morate vidjeti",
-      "url": "https://www.index.hr/magazin/clanak/video-novi-vucicev-predizborni-spot-morate-vidjeti/2845572.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:12:00 +0200",
-      "published_iso": "2026-10-14T12:12:00+00:00"
-    },
-    {
-      "title": "Video. Na Ugljanu gori skladište poznate tvrtke koja se bavi uzgojem tune, hitno stižu cisterne iz Zadra",
-      "url": "https://www.telegram.hr/vijesti/video-na-ugljanu-gori-skladiste-poznate-tvrtke-koja-se-bavi-uzgojem-tune-hitno-stizu-cisterne-iz-zadra/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:11:47 +0000",
-      "published_iso": "2026-10-14T12:11:47+00:00"
-    },
-    {
-      "title": "Cane iz Partibrejkersa bio je na posljednjem ispraćaju Gorana Bareta",
-      "url": "https://www.index.hr/magazin/clanak/cane-iz-partibrejkersa-bio-je-na-posljednjem-ispracaju-gorana-bareta/2845566.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:11:00 +0200",
-      "published_iso": "2026-10-14T12:11:00+00:00"
     },
     {
       "title": "Trump traži žrtvenog jarca za mogući poraz: U središtu priče savjetnik koji je surađivao s Dodikom",
@@ -1001,30 +1289,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 12:10:03 GMT",
       "published_iso": "2026-10-14T12:10:03+00:00"
-    },
-    {
-      "title": "Tri znaka koja se stalno brinu zbog stvari koje se još nisu dogodile",
-      "url": "https://www.index.hr/horoskop/clanak/tri-znaka-koja-se-stalno-brinu-zbog-stvari-koje-se-jos-nisu-dogodile/2845571.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:10:00 +0200",
-      "published_iso": "2026-10-14T12:10:00+00:00"
-    },
-    {
-      "title": "Europa želi proizvoditi puno više oružja. Ulaže se 1.26 milijardi eura",
-      "url": "https://www.index.hr/vijesti/clanak/europa-zeli-proizvoditi-puno-vise-oruzja-ulaze-se-126-milijardi-eura/2845576.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:09:45 +0200",
-      "published_iso": "2026-10-14T12:09:45+00:00"
-    },
-    {
-      "title": "Kod Vukovara ilegalno iskopavali antičke novčiće, nakit... Našli im i pušku",
-      "url": "https://www.index.hr/vijesti/clanak/kod-vukovara-ilegalno-iskopavali-anticke-novcice-nakit-nasli-im-i-pusku/2845567.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:07:00 +0200",
-      "published_iso": "2026-10-14T12:07:00+00:00"
     },
     {
       "title": "Liječnik otkriva test za demenciju koji traje samo 60 sekundi: Provjerite biste li ga prošli",
@@ -1051,30 +1315,6 @@
       "published_iso": "2026-10-14T12:03:55+00:00"
     },
     {
-      "title": "U splitskoj bolnici umrla i peta žrtva požara u Omišu",
-      "url": "https://www.telegram.hr/vijesti/u-splitskoj-bolnici-umrla-i-peta-zrtva-pozara-u-omisu/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:01:15 +0000",
-      "published_iso": "2026-10-14T12:01:15+00:00"
-    },
-    {
-      "title": "SDP-ovac: Za kupnju stana od 60 kvadrata u Zagrebu treba 12 godina plaća",
-      "url": "https://www.index.hr/vijesti/clanak/sdpovac-za-kupnju-stana-od-60-kvadrata-u-zagrebu-treba-12-godina-placa/2845569.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 14:01:00 +0200",
-      "published_iso": "2026-10-14T12:01:00+00:00"
-    },
-    {
-      "title": "U trendu su cipele inspirirane Chanel slingaback modelom pa izdvajamo najljepše iz aktualne ponude",
-      "url": "https://www.telegram.hr/super1/shopping-vodic/dvobojne-cipele-nalik-chanel-slingback-modelu/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:00:20 +0000",
-      "published_iso": "2026-10-14T12:00:20+00:00"
-    },
-    {
       "title": "Preminula i peta žrtva požara u Omišu",
       "url": "https://n1info.hr/crna-kronika/preminula-i-peta-zrtva-pozara-u-omisu/",
       "source": "N1 Hrvatska",
@@ -1097,14 +1337,6 @@
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 12:00:00 +0000",
       "published_iso": "2026-10-14T12:00:00+00:00"
-    },
-    {
-      "title": "Portugalci nahvalili Pajača: Suđenje na razini Lige prvaka",
-      "url": "https://www.index.hr/sport/clanak/portugalci-nahvalili-pajaca-sudjenje-ne-razini-lige-prvaka/2845557.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:59:00 +0200",
-      "published_iso": "2026-10-14T11:59:00+00:00"
     },
     {
       "title": "Kompanija koja je vrijedila gotovo 5 milijardi dolara proglasila stečaj",
@@ -1139,38 +1371,6 @@
       "published_iso": "2026-10-14T11:56:11+00:00"
     },
     {
-      "title": "UEFA kaznila HNS zbog ispada na Poljudu. Evo koliko trebati platiti nakon Španjolske",
-      "url": "https://www.index.hr/sport/clanak/uefa-kaznila-hns-zbog-ispada-na-poljudu-evo-koliko-trebati-platiti-nakon-spanjolske/2845563.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:55:00 +0200",
-      "published_iso": "2026-10-14T11:55:00+00:00"
-    },
-    {
-      "title": "VIDEO Gori skladište na Ugljanu. Iz Zadra trajektom poslane vatrogasne cisterne",
-      "url": "https://www.index.hr/vijesti/clanak/video-gori-skladiste-na-ugljanu-iz-zadra-trajektom-poslane-vatrogasne-cisterne/2845565.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:54:00 +0200",
-      "published_iso": "2026-10-14T11:54:00+00:00"
-    },
-    {
-      "title": "UEFA opet kaznila HNS zbog navijača, ovoga puta riječ je o problemima sa Španjolske na Poljudu",
-      "url": "https://www.telegram.hr/telesport/na-prvu/uefa-opet-kaznila-hns-zbog-navijaca-ovoga-puta-rijec-je-o-problemima-sa-spanjolske-na-poljudu/",
-      "source": "Telegram",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 11:53:04 +0000",
-      "published_iso": "2026-10-14T11:53:04+00:00"
-    },
-    {
-      "title": "Kaos u Unitedu. Diallo: Je*ena sramota, nemam riječi",
-      "url": "https://www.index.hr/sport/clanak/kaos-u-unitedu-diallo-jeena-sramota-nemam-rijeci/2845559.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:53:00 +0200",
-      "published_iso": "2026-10-14T11:53:00+00:00"
-    },
-    {
       "title": "French journalist Natacha Polony joins growing field of 2027 presidential hopefuls",
       "url": "https://www.euronews.com/2026/10/14/french-journalist-natacha-polony-joins-growing-field-of-2027-presidential-hopefuls",
       "source": "Euronews",
@@ -1185,14 +1385,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 11:51:29 GMT",
       "published_iso": "2026-10-14T11:51:29+00:00"
-    },
-    {
-      "title": "Kada treba dodati sol u juhu? Odgovor bi vas mogao iznenaditi",
-      "url": "https://www.index.hr/food/clanak/kada-treba-dodati-sol-u-juhu-odgovor-bi-vas-mogao-iznenaditi/2845553.aspx",
-      "source": "Index",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 13:51:00 +0200",
-      "published_iso": "2026-10-14T11:51:00+00:00"
     },
     {
       "title": "VIDEO / Veliki požar na Ugljanu: Gusti, crni dim vidi se iz Zadra",
@@ -1483,14 +1675,6 @@
       "published_iso": "2026-10-14T10:55:06+00:00"
     },
     {
-      "title": "Ružić o minimalnoj plaći od 1250 eura: \"Ne sumnjam da ćemo to ostvariti\"",
-      "url": "https://n1info.hr/vijesti/ruzic-o-minimalnoj-placi-od-1250-eura-ne-sumnjam-da-cemo-to-ostvariti/",
-      "source": "N1 Hrvatska",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:53:53 +0200",
-      "published_iso": "2026-10-14T10:53:53+00:00"
-    },
-    {
       "title": "Dangote refinery extends IPO: Plant has reshaped Nigeria's fuel market",
       "url": "https://www.france24.com/en/video/20261014-dangote-refinery-extends-ipo-plant-has-reshaped-nigeria-s-fuel-market",
       "source": "France 24",
@@ -1513,14 +1697,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 10:51:41 GMT",
       "published_iso": "2026-10-14T10:51:41+00:00"
-    },
-    {
-      "title": "Teška prometna nesreća: Automobil naletio na dvoje djece",
-      "url": "https://n1info.hr/vijesti/teska-prometna-nesreca-automobil-naletio-na-dvoje-djece/",
-      "source": "N1 Hrvatska",
-      "category": "Hrvatska",
-      "published": "Wed, 14 Oct 2026 12:50:15 +0200",
-      "published_iso": "2026-10-14T10:50:15+00:00"
     },
     {
       "title": "Turkish police raid opposition TV station, halting live broadcasts",
@@ -1681,14 +1857,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 12:06:41 +0200",
       "published_iso": "2026-10-14T10:06:41+00:00"
-    },
-    {
-      "title": "Ukrainian soldiers in combat have access to Starlink satellite internet restricted",
-      "url": "https://www.theguardian.com/world/2026/oct/14/ukraine-soldiers-combat-access-starlink-satellite-internet-restricted",
-      "source": "The Guardian",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 10:05:36 GMT",
-      "published_iso": "2026-10-14T10:05:36+00:00"
     },
     {
       "title": "Za mlade iz Hrvatske 370 besplatnih karata za putovanje Europom: Prijave završavaju sutra u podne",
@@ -1859,14 +2027,6 @@
       "published_iso": "2026-10-14T09:33:18+00:00"
     },
     {
-      "title": "As the US and China race ahead in AI, France carves its own path with Nvidia’s help",
-      "url": "https://www.euronews.com/2026/10/14/as-the-us-and-china-race-ahead-in-ai-france-carves-its-own-path-with-nvidias-help",
-      "source": "Euronews",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 11:31:49 +0200",
-      "published_iso": "2026-10-14T09:31:49+00:00"
-    },
-    {
       "title": "Nvidia's Huang announces new investments in French tech sector",
       "url": "https://www.france24.com/en/tv-shows/business/20261014-nvidia-s-huang-announces-new-investments-in-french-tech-sector",
       "source": "France 24",
@@ -1885,7 +2045,7 @@
     {
       "title": "Ukrainian soldier goes on trial over sabotage of Nord Stream gas pipelines",
       "url": "https://www.theguardian.com/business/2026/oct/14/ukrainian-soldier-to-go-on-trial-over-sabotage-of-nord-stream-gas-pipelines",
-      "source": "The Guardian",
+      "source": "The Guardian Europe",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 09:24:46 GMT",
       "published_iso": "2026-10-14T09:24:46+00:00"
@@ -1897,14 +2057,6 @@
       "category": "Hrvatska",
       "published": "Wed, 14 Oct 2026 09:23:51 +0000",
       "published_iso": "2026-10-14T09:23:51+00:00"
-    },
-    {
-      "title": "Albania: Student protests in Tirana turn violent as Flamingo Revolution escalates",
-      "url": "https://www.euronews.com/video/2026/10/14/albania-student-protests-in-tirana-turn-violent-as-flamingo-revolution-escalates",
-      "source": "Euronews",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 11:22:10 +0200",
-      "published_iso": "2026-10-14T09:22:10+00:00"
     },
     {
       "title": "Ukraine warns Starlink limits are disrupting military operations as Russia pounds its energy infrastructure",
@@ -1953,14 +2105,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 09:05:17 +0000",
       "published_iso": "2026-10-14T09:05:17+00:00"
-    },
-    {
-      "title": "Is the modern economic system broken? These urban beekeepers think so – and this is their solution",
-      "url": "https://www.theguardian.com/lifeandstyle/2026/oct/14/is-the-modern-economic-system-broken-these-urban-beekeepers-think-so-and-this-is-their-solution",
-      "source": "The Guardian Europe",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 09:00:50 GMT",
-      "published_iso": "2026-10-14T09:00:50+00:00"
     },
     {
       "title": "Scott Bessent's growth plans aren't enough to tame surging deficit and debt pile, IMF chief says",
@@ -2067,52 +2211,12 @@
       "published_iso": "2026-10-14T07:59:53+00:00"
     },
     {
-      "title": "Tensions with teachers, pupils and Turkiye: Inside Azerbaijan’s hijab row",
-      "url": "https://www.aljazeera.com/news/2026/10/14/tensions-with-teachers-pupils-and-turkiye-inside-azerbaijans-hijab-row?traffic_source=rss",
-      "source": "Al Jazeera",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:57:45 +0000",
-      "published_iso": "2026-10-14T07:57:45+00:00"
-    },
-    {
       "title": "Budget ‘beerlaterals’: How Burnham and Healey really work",
       "url": "https://www.politico.eu/podcast/eu-confidential/budget-beerlaterals-how-burnham-and-healey-really-work/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
       "source": "Politico Europe",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 07:52:24 +0000",
       "published_iso": "2026-10-14T07:52:24+00:00"
-    },
-    {
-      "title": "Palestinians say Israel’s democracy ‘is a joke’",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/10/14/palestinians-say-israels-democracy-is-a?traffic_source=rss",
-      "source": "Al Jazeera",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:41:20 +0000",
-      "published_iso": "2026-10-14T07:41:20+00:00"
-    },
-    {
-      "title": "How Israel’s ‘Yellow Line’ is reshaping southern Lebanon",
-      "url": "https://www.aljazeera.com/news/2026/10/14/how-israels-yellow-line-is-reshaping-southern-lebanon?traffic_source=rss",
-      "source": "Al Jazeera",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:38:09 +0000",
-      "published_iso": "2026-10-14T07:38:09+00:00"
-    },
-    {
-      "title": "Yamal magic helps Barcelona beat Galatasaray in Champions League",
-      "url": "https://www.aljazeera.com/sports/2026/10/14/yamal-magic-helps-barcelona-beat-galatasaray-in-champions-league?traffic_source=rss",
-      "source": "Al Jazeera",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:35:43 +0000",
-      "published_iso": "2026-10-14T07:35:43+00:00"
-    },
-    {
-      "title": "Ex-DRC President Kabila’s alliance with M23 rebels: Why it matters",
-      "url": "https://www.aljazeera.com/news/2026/10/14/ex-drc-president-joseph-kabila-joins-hands-with-m23-rebels-why-it-matters?traffic_source=rss",
-      "source": "Al Jazeera",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:32:24 +0000",
-      "published_iso": "2026-10-14T07:32:24+00:00"
     },
     {
       "title": "Video recording device found in cabin of HMAS Leeuwin navy ship in Cairns",
@@ -2131,14 +2235,6 @@
       "published_iso": "2026-10-14T07:01:02+00:00"
     },
     {
-      "title": "Joining Shakhtar as they make base in London: ‘We’re here to show the world that we are alive’",
-      "url": "https://www.theguardian.com/football/2026/oct/14/shakhtar-donetsk-champions-league-arda-turan-london-stamford-bridge-aek-athens",
-      "source": "The Guardian Europe",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 07:00:47 GMT",
-      "published_iso": "2026-10-14T07:00:47+00:00"
-    },
-    {
       "title": "CNBC Daily Open: Zelenskyy heads to UK for talks on fresh support",
       "url": "https://www.cnbc.com/2026/10/14/daily-open-zelenskyy-uk-visit-asml-results.html",
       "source": "CNBC World",
@@ -2147,52 +2243,12 @@
       "published_iso": "2026-10-14T06:57:16+00:00"
     },
     {
-      "title": "Trump says 'massive' oil, gas and mineral exploration to begin in Greenland",
-      "url": "https://www.france24.com/en/europe/20261014-trump-says-massive-oil-gas-and-mineral-exploration-to-begin-in-greenland",
-      "source": "France 24",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 06:41:15 GMT",
-      "published_iso": "2026-10-14T06:41:15+00:00"
-    },
-    {
-      "title": "🔴Ukraine live: Russia's 'targeted' strikes on energy leave 600,000 without power, Zelensky says",
-      "url": "https://www.france24.com/en/europe/20261014-live-ukraine-massive-russian-attack-on-energy-facilities-at-least-six-dead",
-      "source": "France 24",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 06:23:02 GMT",
-      "published_iso": "2026-10-14T06:23:02+00:00"
-    },
-    {
-      "title": "How Europe’s most wanted cocaine trafficker turned Sierra Leone into the world’s first true narco state",
-      "url": "https://www.theguardian.com/global-development/ng-interactive/2026/oct/14/europes-most-wanted-cocaine-trafficker-sierra-leone-crime-drugs-narco-state",
-      "source": "The Guardian Europe",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 06:00:46 GMT",
-      "published_iso": "2026-10-14T06:00:46+00:00"
-    },
-    {
       "title": "Australian industry reliant on gas for ‘foreseeable future’, resources minister tells press club",
       "url": "https://www.theguardian.com/australia-news/2026/oct/14/australia-reliant-on-gas-for-foreseeable-future-madeleine-king-press-club",
       "source": "The Guardian",
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 05:52:22 GMT",
       "published_iso": "2026-10-14T05:52:22+00:00"
-    },
-    {
-      "title": "Champions League: Arsenal leave no chance to Lille and Olivier Giroud",
-      "url": "https://www.france24.com/en/tv-shows/sports/20261014-champions-league-arsenal-leave-no-chance-to-lille-and-olivier-giroud",
-      "source": "France 24",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 05:49:21 GMT",
-      "published_iso": "2026-10-14T05:49:21+00:00"
-    },
-    {
-      "title": "Wednesday briefing: ​Why small boat crossings are here to stay ​",
-      "url": "https://www.theguardian.com/world/2026/oct/14/wednesday-briefing-why-small-boat-crossings-are-here-to-stay",
-      "source": "The Guardian",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 05:44:34 GMT",
-      "published_iso": "2026-10-14T05:44:34+00:00"
     },
     {
       "title": "Judge extends block on Trump White House ban of MS NOW, CNN and Politico",
@@ -2297,22 +2353,6 @@
       "category": "Svijet",
       "published": "Wed, 14 Oct 2026 02:04:47 GMT",
       "published_iso": "2026-10-14T02:04:47+00:00"
-    },
-    {
-      "title": "Ukraine brings war effort to football’s Champions League",
-      "url": "https://www.politico.eu/article/ukraine-brings-war-effort-football-champions-league-shakhtar-donetsk/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "Politico Europe",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 02:00:00 +0000",
-      "published_iso": "2026-10-14T02:00:00+00:00"
-    },
-    {
-      "title": "How Europe can increase resilience to global shocks — live updates",
-      "url": "https://www.politico.eu/article/european-resilience-summit-live-updates/?utm_source=RSS_Feed&utm_medium=RSS&utm_campaign=RSS_Syndication",
-      "source": "Politico Europe",
-      "category": "Svijet",
-      "published": "Wed, 14 Oct 2026 02:00:00 +0000",
-      "published_iso": "2026-10-14T02:00:00+00:00"
     },
     {
       "title": "Justice Department says North Koreans have infiltrated dozens of US companies",
@@ -2507,14 +2547,6 @@
       "published_iso": "2026-10-13T22:00:00+00:00"
     },
     {
-      "title": "Commission proposes flexibility to methane importers to help save costs",
-      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2119",
-      "source": "European Commission",
-      "category": "Svijet",
-      "published": "Tue, 13 Oct 2026 22:00:00 GMT",
-      "published_iso": "2026-10-13T22:00:00+00:00"
-    },
-    {
       "title": "ESA targets Anbernic emulation handhelds as \"superfake\" piracy enablers",
       "url": "https://arstechnica.com/gaming/2026/10/esa-targets-anbernic-emulation-handhelds-as-superfake-piracy-enablers/",
       "source": "Ars Technica",
@@ -2627,14 +2659,6 @@
       "published_iso": "2026-10-13T19:23:28+00:00"
     },
     {
-      "title": "Xbox is officially embracing the chaos of AI-powered game ports",
-      "url": "https://www.theverge.com/news/1010406/xbox-labs-game-decompiling-emulation-exploration",
-      "source": "The Verge",
-      "category": "Svijet",
-      "published": "2026-10-13T15:00:48-04:00",
-      "published_iso": "2026-10-13T19:00:48+00:00"
-    },
-    {
       "title": "Niobia takes the guesswork out of some of tech’s most expensive mistakes",
       "url": "https://techcrunch.com/2026/10/13/niobia-takes-the-guesswork-out-of-some-of-techs-most-expensive-mistakes/",
       "source": "TechCrunch",
@@ -2649,14 +2673,6 @@
       "category": "Hrvatska",
       "published": "Tue, 13 Oct 2026 18:56:08 +0000",
       "published_iso": "2026-10-13T18:56:08+00:00"
-    },
-    {
-      "title": "The Nothing Headphone A are half off for the first time",
-      "url": "https://www.theverge.com/gadgets/1010384/nothing-headphone-a-charli-xcx-deal-sale",
-      "source": "The Verge",
-      "category": "Svijet",
-      "published": "2026-10-13T14:33:14-04:00",
-      "published_iso": "2026-10-13T18:33:14+00:00"
     },
     {
       "title": "Rivian’s startup Mind Robotics hires former Ford EV chief Doug Field",
@@ -2763,14 +2779,6 @@
       "published_iso": "2026-10-13T17:30:00+00:00"
     },
     {
-      "title": "Hakeri napali hladnjake u francuskim trgovinama i uništili hranu",
-      "url": "https://vijesti.hrt.hr/eu/hakeri-napali-hladnjake-u-francuskim-trgovinama-i-unistili-hranu-12955078",
-      "source": "HRT",
-      "category": "Hrvatska",
-      "published": "Tue, 13 Oct 2026 17:29:42 +0000",
-      "published_iso": "2026-10-13T17:29:42+00:00"
-    },
-    {
       "title": "Pluto Security raises $42M as AI gives enterprise security teams a new headache",
       "url": "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/",
       "source": "TechCrunch",
@@ -2785,14 +2793,6 @@
       "category": "Svijet",
       "published": "Tue, 13 Oct 2026 17:10:50 GMT",
       "published_iso": "2026-10-13T17:10:50+00:00"
-    },
-    {
-      "title": "Inside Katie Zacharia's very brief White House briefing",
-      "url": "https://www.bbc.co.uk/news/videos/cxm235y4l54lo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "category": "Svijet",
-      "published": "Tue, 13 Oct 2026 17:04:37 GMT",
-      "published_iso": "2026-10-13T17:04:37+00:00"
     },
     {
       "title": "Google wants to host your personal vibe-coded apps in the Play Store",
