@@ -200,7 +200,16 @@ document.getElementById("search").addEventListener("input",render);
 let lastDataStamp="";
 async function refreshNews(){
  try{
-  const response=await fetch("./news.json?t="+Date.now(),{cache:"no-store"});
+  // Load committed data directly, independent of Pages deployment delays.
+  const liveUrl="https://raw.githubusercontent.com/ninodjula-debug/newsroom-radar/main/news.json?t="+Date.now();
+  let response,source="GitHub (izravno)";
+  try{
+   response=await fetch(liveUrl,{cache:"no-store"});
+   if(!response.ok)throw Error("GitHub data unavailable");
+  }catch(primaryError){
+   response=await fetch("./news.json?t="+Date.now(),{cache:"no-store"});
+   source="rezervna kopija (GitHub Pages)";
+  }
   if(!response.ok)throw Error("Nema podataka");
   const data=await response.json();
   const stamp=data.updated||"";
@@ -209,7 +218,7 @@ async function refreshNews(){
   const label=valid?when.toLocaleString("hr-HR",{dateStyle:"short",timeStyle:"short"}):"nepoznato";
   const age=valid?(Date.now()-when.getTime())/60000:null;
   const freshness=document.getElementById("freshness");
-  freshness.textContent="Podaci prikupljeni: "+label+(age!==null&&age>40?" · UPOZORENJE: podaci su stariji od 40 minuta. Automatsko prikupljanje možda ne radi.":"")+" · Stranica provjerava novosti svakih 5 minuta.";
+  freshness.textContent="Podaci prikupljeni: "+label+(age!==null&&age>40?" · UPOZORENJE: podaci su stariji od 40 minuta. Automatsko prikupljanje možda ne radi.":"")+" · Izvor: "+source+" · Provjera svakih 5 minuta.";
   if(stamp!==lastDataStamp){
    articles=Array.isArray(data.articles)?data.articles:[];
    lastDataStamp=stamp;
