@@ -40,7 +40,7 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
+<h2>Za uredničku provjeru</h2><p class="note">Kandidati za pregled, ne automatski izbor najvažnijih vijesti. Otvori „Usporedi naslove” uz temu za pripremu detaljnije analize. Prednost imaju događaji koje neovisno prate različiti izvori; reklame i lifestyle naslovi izostavljeni su iz ovog odjeljka.</p><div id="priorities"></div><h2>Teme u više izvora</h2><p class="note">Probno grupiranje prema sličnosti naslova; provjeri poveznice jer sličan naslov ne jamči isti događaj.</p><div id="clusters"></div><h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
 </main>
 <script>
 let articles=[];
@@ -91,6 +91,21 @@ function renderClusters(items){
   root.append(card);
  }
 }
+function analysisPrompt(g){
+ const lines=g.map((a,i)=>(i+1)+". "+a.source+": "+a.title+"\\n"+a.url).join("\\n\\n");
+ return "Analiziraj ovu skupinu vijesti kao iskusni urednik hrvatskog informativnog portala.\\n\\n"+lines+"\\n\\nVAŽNO: Ovo su samo naslovi i poveznice, ne puni tekstovi. Ne pretpostavljaj da si pročitao članke. Ako možeš otvoriti poveznice, pročitaj ih i jasno navedi što si provjerio; ako ne možeš, ograniči zaključke na naslove.\\n\\nOdgovori konkretno: (1) što je zajednička provjerljiva činjenica, a što još nije potvrđeno; (2) koje se razlike u naglasku izvora vide, bez nagađanja o motivima; (3) koja važna pitanja ostaju otvorena; (4) najviše dvije doista originalne ideje za daljnje izvještavanje, ili reci da ih nema; (5) koje primarne dokumente, podatke i sugovornike vrijedi provjeriti. Razlikuj činjenice, pretpostavke i uredničke prijedloge. Bez općenitih fraza i izmišljanja hrvatskog kuta.";
+}
+function addAnalysis(card,g){
+ const details=document.createElement("details");details.style.marginTop="14px";
+ const summary=document.createElement("summary");summary.textContent="Usporedi naslove i pripremi AI analizu";summary.style.cursor="pointer";details.append(summary);
+ const note=document.createElement("p");note.className="note";note.textContent="Radar zasad uspoređuje naslove, ne sadržaj članaka. Različiti naslovi nisu dokaz različitih činjenica.";details.append(note);
+ const ul=document.createElement("ul");
+ for(const a of g){const li=document.createElement("li");li.textContent=a.source+": "+a.title;ul.append(li)}details.append(ul);
+ const btn=document.createElement("button");btn.type="button";btn.textContent="Kopiraj zadatak za analizu u ChatGPT";
+ const feedback=document.createElement("span");feedback.className="note";feedback.style.marginLeft="10px";
+ btn.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(analysisPrompt(g));feedback.textContent="Kopirano. Zalijepi u ChatGPT."}catch(e){feedback.textContent="Kopiranje nije uspjelo.";const ta=document.createElement("textarea");ta.value=analysisPrompt(g);ta.rows=7;ta.style.width="100%";details.append(ta);ta.select()}});
+ details.append(btn,feedback);card.append(details);
+}
 function renderPriorities(items){
  const root=document.getElementById("priorities");root.replaceChildren();
  const exclude=/shopping|kupon|popust|snižen|modn|cipele|haljin|horoskop|recept|najljepš|showbiz|slingback|outfit|sponzoriran|promo|oglas|celebrity|recenzija filma|review –/i;
@@ -104,6 +119,7 @@ function renderPriorities(items){
   const meta=document.createElement("div");meta.className="meta";meta.textContent="Za provjeru · "+g.length+" različita izvora · rangirano prema broju izvora";card.append(meta);
   for(const a of g){let u;try{u=new URL(a.url);if(!["https:","http:"].includes(u.protocol))continue}catch(e){continue}
    const p=document.createElement("p"),link=document.createElement("a");link.textContent=a.source+" — "+a.title;link.href=u.href;link.target="_blank";link.rel="noopener noreferrer";link.style.fontSize="14px";p.append(link);card.append(p)}
+  addAnalysis(card,g);
   root.append(card);
  }
 }
