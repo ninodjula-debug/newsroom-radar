@@ -12,7 +12,7 @@ SOURCES = [
     ("Tportal", "https://www.tportal.hr/rss", "Hrvatska"),
     ("Poslovni dnevnik", "https://www.poslovni.hr/feed", "Hrvatska"),
     ("Večernji list", "https://www.vecernji.hr/feeds/latest", "Hrvatska"),
-    ("Jutarnji list", "https://www.jutarnji.hr/rss", "Hrvatska"),
+    ("Jutarnji list", "https://news.google.com/rss/search?q=site%3Ajutarnji.hr+when%3A1d&hl=hr&gl=HR&ceid=HR%3Ahr", "Hrvatska"),
     ("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml", "Svijet"),
     ("BBC Europe", "https://feeds.bbci.co.uk/news/world/europe/rss.xml", "Svijet"),
     ("The Guardian", "https://www.theguardian.com/world/rss", "Svijet"),
@@ -77,6 +77,14 @@ def parse_feed(content, source, category):
             link = text(item, "link")
             raw_date = text(item, "pubDate") or text(item, NS_DC + "date")
 
+        if source == "Jutarnji list":
+            publisher = text(item, "source")
+            if publisher and "jutarnji" not in publisher.lower():
+                continue
+            if not publisher and "jutarnji" not in title.lower():
+                continue
+            if title.lower().endswith(" - jutarnji list"):
+                title = title[:-len(" - Jutarnji list")]
         if title and link.startswith(("https://", "http://")):
             results.append({
                 "title": title,
