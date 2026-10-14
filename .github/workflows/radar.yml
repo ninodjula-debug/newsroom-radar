@@ -3,10 +3,12 @@ name: Newsroom Radar
 on:
   schedule:
     - cron: '3,18,33,48 * * * *'
+    - cron: '30 4,18 * * *' # 06:30 and 20:30 Europe/Zagreb in summer; UTC shift applies in winter
   push:
     branches: [main]
     paths:
       - 'scripts/fetch_news.py'
+      - 'scripts/fetch_calendar.py'
       - '.github/workflows/radar.yml'
   workflow_dispatch:
 
@@ -33,16 +35,21 @@ jobs:
       - name: Prikupi vijesti
         run: python scripts/fetch_news.py
 
+      - name: Prikupi službene najave
+        run: python scripts/fetch_calendar.py
+
       - name: Objavi podatke bez ponovne izgradnje web stranice
         run: |
           git config user.name "Newsroom Radar Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp news.json /tmp/radar-news.json
+          cp calendar.json /tmp/radar-calendar.json
           for attempt in 1 2 3 4 5; do
             git fetch origin radar-data
             git checkout -B radar-data origin/radar-data
             cp /tmp/radar-news.json news.json
-            git add news.json
+            cp /tmp/radar-calendar.json calendar.json
+            git add news.json calendar.json
             if git diff --cached --quiet; then
               echo "No data changes"
               break
