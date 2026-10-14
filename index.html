@@ -152,7 +152,7 @@ function renderNew(items){
   info.textContent="Prvi pregled na ovom uređaju. Od sljedećeg otvaranja označavat ćemo nove članke.";root.append(info);return;
  }
  const old=new Set(previousSeen.urls);
- const fresh=items.filter(a=>a.url&&!old.has(a.url));
+ const fresh=newestFirst(items.filter(a=>a.url&&!old.has(a.url)));
  info.textContent=fresh.length+" novih članaka u trenutačnom filtru od prethodnog otvaranja na ovom uređaju.";root.append(info);
  for(const a of fresh.slice(0,30)){const card=makeCard(a);if(card)root.append(card)}
  if(fresh.length>30){const p=document.createElement("p");p.className="note";p.textContent="Prikazano prvih 30 novih članaka.";root.append(p)}
@@ -177,9 +177,16 @@ function renderAgenda(){
   card.append(title,meta);root.append(card);
  }
 }
+function articleTime(a){
+ const t=Date.parse(a.published_iso||"");
+ return Number.isFinite(t)?t:-Infinity;
+}
+function newestFirst(items){
+ return [...items].sort((a,b)=>articleTime(b)-articleTime(a));
+}
 function render(){
  const term=document.getElementById("search").value.toLocaleLowerCase("hr");
- const selected=articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term));
+ const selected=newestFirst(articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term)));
  document.getElementById("status").textContent="Prikazano "+selected.length+" od "+articles.length+" vijesti";
  renderAgenda();
  renderNew(selected);
