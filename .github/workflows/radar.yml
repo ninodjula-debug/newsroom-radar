@@ -33,23 +33,27 @@ jobs:
       - name: Prikupi vijesti
         run: python scripts/fetch_news.py
 
-      - name: Spremi nove vijesti
+      - name: Objavi podatke bez ponovne izgradnje web stranice
         run: |
           git config user.name "Newsroom Radar Bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add news.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update news"
-            for attempt in 1 2 3 4 5; do
-              git fetch origin main
-              git rebase origin/main
-              if git push origin HEAD:main; then
-                break
-              fi
-              if [ "$attempt" -eq 5 ]; then
-                echo "Failed to push updated news after retries"
-                exit 1
-              fi
-              sleep 3
-            done
-          fi
+          cp news.json /tmp/radar-news.json
+          for attempt in 1 2 3 4 5; do
+            git fetch origin radar-data
+            git checkout -B radar-data origin/radar-data
+            cp /tmp/radar-news.json news.json
+            git add news.json
+            if git diff --cached --quiet; then
+              echo "No data changes"
+              break
+            fi
+            git commit -m "Update radar data"
+            if git push origin HEAD:radar-data; then
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "Data branch update failed"
+              exit 1
+            fi
+            sleep 3
+          done
