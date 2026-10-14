@@ -40,55 +40,27 @@ h2{margin-top:30px;font-size:22px}
 <button data-filter="Svijet">Svijet</button>
 <input id="search" placeholder="Pretraži vijesti...">
 </div>
-<section id="top-section"><h2>Top 20 za urednički pregled</h2><p class="note">Automatski odabir prema temama i aktualnosti. Urednički prijedlozi su predlošci, ne provjerene činjenice.</p><div id="top-news"></div></section><h2>Sve vijesti</h2><div id="news"></div>
+<h2>Najnovije vijesti</h2><p class="note">Kronološki pregled izvora. Uredničke analize nisu uključene dok ne uvedemo pouzdanu analizu sadržaja.</p><div id="news"></div>
 </main>
 <script>
 let articles=[];
 let filter="Sve";
 
-const themes=[
- {re:/vlada|sabor|izbor|predsjednik|premijer|ministar|parlament|europsk|eu |bruxelles|brussels/i,why:"Moguće političke ili regulatorne posljedice za Hrvatsku.",follow:"Provjeriti hrvatsku reakciju i moguće posljedice odluke.",who:"Nadležno ministarstvo, stručnjak za javne politike; provjeriti rokove i službene dokumente."},
- {re:/cijen|inflacij|kamata|banka|gospodar|ekonom|porez|plać|stan|nekretnin|energ|naft|plin/i,why:"Tema može utjecati na troškove života, poduzeća ili kućne budžete.",follow:"Izračunati učinak na tipično hrvatsko kućanstvo ili tvrtku.",who:"DZS, HNB, sektorska udruga; provjeriti domaće brojke i usporedive podatke."},
- {re:/rat|ukrajin|rusij|nato|sigurnost|napad|sankcij|trump|kina|china/i,why:"Međunarodni događaj s mogućim sigurnosnim i gospodarskim učincima.",follow:"Istražiti hrvatsku izloženost i diplomatski odgovor.",who:"MVEP, sigurnosni analitičar; provjeriti službene izjave i utjecaj na Hrvatsku."},
- {re:/ai|umjetn.*inteligenc|tehnolog|digital|medij|novinar|internet|google|meta/i,why:"Tehnološka promjena može utjecati na hrvatske korisnike i medije.",follow:"Pronaći domaći primjer primjene ili posljedica.",who:"Domaći istraživač ili tvrtka; provjeriti dostupnost i regulatorni okvir u EU."}
-];
-function editorial(a){
- const t=themes.find(x=>x.re.test(a.title));
- return t||{why:"Potencijalno relevantna vijest; hrvatsku poveznicu tek treba potvrditi.",follow:"Pronaći hrvatski kut priče i dodatnu činjenicu koja nije u izvornoj vijesti.",who:"Kontaktirati nadležnu instituciju ili neovisnog stručnjaka; provjeriti primarni izvor."};
-}
-function score(a){
- const title=a.title||"";
- let s=a.category==="Hrvatska"?4:0;
- for(const t of themes)if(t.re.test(title))s+=3;
- if(/breaking|hitno|odluka|usvoj|potvrd|objav|umro|poginu|uhićen|istrag|sud|crisis|deal|election/i.test(title))s+=2;
- const age=(Date.now()-Date.parse(a.published_iso||""))/3600000;
- if(Number.isFinite(age))s+=Math.max(0,3-age/8);
- return s;
-}
-function makeCard(a,top=false){
+function makeCard(a){
  let url;
  try{url=new URL(a.url);if(!["https:","http:"].includes(url.protocol))return null}catch(e){return null}
- const card=document.createElement("article");card.className="card"+(top?" top-card":"");
+ const card=document.createElement("article");card.className="card";
  const link=document.createElement("a");link.textContent=a.title;link.href=url.href;link.target="_blank";link.rel="noopener noreferrer";
  const meta=document.createElement("div");meta.className="meta";
  meta.textContent=a.source+" | "+a.category+(a.published?" | "+a.published:"");
  card.append(link,meta);
- if(top){
-  const e=editorial(a),block=document.createElement("div");block.className="editorial";
-  for(const [label,value] of [["Zašto je važno",e.why],["Originalni follow-up",e.follow],["Koga kontaktirati / provjeriti",e.who]]){
-   const p=document.createElement("p"),b=document.createElement("strong");b.textContent=label+": ";p.append(b,document.createTextNode(value));block.append(p);
-  }
-  card.append(block);
- }
  return card;
 }
 function render(){
  const term=document.getElementById("search").value.toLocaleLowerCase("hr");
  const selected=articles.filter(a=>(filter==="Sve"||a.category===filter)&&((a.title||"")+" "+a.source).toLocaleLowerCase("hr").includes(term));
  document.getElementById("status").textContent="Prikazano "+selected.length+" od "+articles.length+" vijesti";
- const container=document.getElementById("news"),top=document.getElementById("top-news");container.replaceChildren();top.replaceChildren();
- const ranked=[...selected].sort((a,b)=>score(b)-score(a)).slice(0,20);
- for(const a of ranked){const card=makeCard(a,true);if(card)top.append(card)}
+ const container=document.getElementById("news");container.replaceChildren();
  for(const a of selected){const card=makeCard(a);if(card)container.append(card)}
 }
 document.querySelectorAll("button[data-filter]").forEach(btn=>{
